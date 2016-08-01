@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
+    <entity name="Course" syncable="YES">
+        <attribute name="credits" optional="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" syncable="YES"/>
+        <attribute name="teacher" optional="YES" syncable="YES"/>
+    </entity>
+    <entity name="Evaluation" syncable="YES">
+        <attribute name="grade" optional="YES" syncable="YES"/>
+        <attribute name="label" optional="YES" syncable="YES"/>
+        <attribute name="saved" optional="YES" syncable="YES"/>
+        <attribute name="type" optional="YES" syncable="YES"/>
+        <attribute name="weight" optional="YES" syncable="YES"/>
+    </entity>
+    <entity name="Semester" syncable="YES">
+        <attribute name="name" optional="YES" syncable="YES"/>
+        <attribute name="roundCourseGrade" optional="YES" syncable="YES"/>
+        <attribute name="roundSemesterGrade" optional="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Semester" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Course" positionX="-54" positionY="18" width="128" height="90"/>
+        <element name="Evaluation" positionX="-36" positionY="45" width="128" height="120"/>
+    </elements>
+</model>
