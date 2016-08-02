@@ -8,13 +8,12 @@
 
 import Foundation
 import RealmSwift
-import Semester
 
 class Course: Object {
     
     dynamic var name = ""
     dynamic var teacher : String? = nil
-    let credits = RealmOptional<Int>
+    let credits = RealmOptional<Int>()
     dynamic var semester : Semester?
     
     
