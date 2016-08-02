@@ -3,5 +3,5 @@ use_frameworks!
 workspace 'uCalc'
 xcodeproj 'uCalc/uCalc'
 
-pod 'SugarRecord', '~> 2.2'
+pod 'RealmSwift'
 
