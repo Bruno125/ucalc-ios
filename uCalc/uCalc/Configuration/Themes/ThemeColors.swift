@@ -20,7 +20,7 @@ class ThemeColors {
     private static var mapper = [String : BaseColor]()
     
     static func asList() -> [BaseColor]{
-        return [ Blue(), Pink(), Green(), Red(), Purple(), Gray(), Orange() ]
+        return [ Blue(), Pink(), Green(), Red(), Purple(), Orange() ]
     }
     
     static func asDict() -> [String : BaseColor] {

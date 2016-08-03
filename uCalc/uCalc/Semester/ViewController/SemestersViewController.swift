@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SemestersViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class SemestersViewController: UcalcViewController,UITableViewDelegate,UITableViewDataSource {
     
     
     @IBOutlet weak var tableView: UITableView!

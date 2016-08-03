@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
+class ProfileViewController: UcalcViewController,UIPickerViewDataSource,UIPickerViewDelegate {
     
     @IBOutlet weak var colorPicker: UIPickerView!
     

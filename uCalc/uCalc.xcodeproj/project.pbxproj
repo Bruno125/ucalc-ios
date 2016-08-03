@@ -27,6 +27,7 @@
 		7F1BC4A31D52520600DD9DD9 /* ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC4A21D52520600DD9DD9 /* ThemeColors.swift */; };
 		7F1BC4A61D52574A00DD9DD9 /* HexaColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC4A51D52574A00DD9DD9 /* HexaColorExtension.swift */; };
 		7F1BC4A81D52598400DD9DD9 /* ThemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC4A71D52598400DD9DD9 /* ThemeHelper.swift */; };
+		7F1BC4AC1D528BCA00DD9DD9 /* UcalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC4AB1D528BCA00DD9DD9 /* UcalcViewController.swift */; };
 		7F33B9BF1D50F87B009B60FA /* airglyphs.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F33B9BB1D50F87B009B60FA /* airglyphs.ttf */; };
 		7F33B9C01D50F87B009B60FA /* circular_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F33B9BC1D50F87B009B60FA /* circular_bold.otf */; };
 		7F33B9C11D50F87B009B60FA /* circular_book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F33B9BD1D50F87B009B60FA /* circular_book.otf */; };
@@ -59,6 +60,7 @@
 		7F1BC4A21D52520600DD9DD9 /* ThemeColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThemeColors.swift; path = Configuration/Themes/ThemeColors.swift; sourceTree = "<group>"; };
 		7F1BC4A51D52574A00DD9DD9 /* HexaColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HexaColorExtension.swift; path = Configuration/Categories/HexaColorExtension.swift; sourceTree = "<group>"; };
 		7F1BC4A71D52598400DD9DD9 /* ThemeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThemeHelper.swift; path = Configuration/Themes/ThemeHelper.swift; sourceTree = "<group>"; };
+		7F1BC4AB1D528BCA00DD9DD9 /* UcalcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UcalcViewController.swift; path = Configuration/View/UcalcViewController.swift; sourceTree = "<group>"; };
 		7F33B9BB1D50F87B009B60FA /* airglyphs.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = airglyphs.ttf; path = Configuration/Font/airglyphs.ttf; sourceTree = "<group>"; };
 		7F33B9BC1D50F87B009B60FA /* circular_bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = circular_bold.otf; path = Configuration/Font/circular_bold.otf; sourceTree = "<group>"; };
 		7F33B9BD1D50F87B009B60FA /* circular_book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = circular_book.otf; path = Configuration/Font/circular_book.otf; sourceTree = "<group>"; };
@@ -262,6 +264,14 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		7F1BC4A91D528B9500DD9DD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F1BC4AB1D528BCA00DD9DD9 /* UcalcViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		7F33B9BA1D50F862009B60FA /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +319,7 @@
 		7F3A5D171D4FAB0300CE0349 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				7F1BC4A91D528B9500DD9DD9 /* View */,
 				7F1BC4A41D5256DC00DD9DD9 /* Categories */,
 				7F1BC4A11D52519F00DD9DD9 /* Themes */,
 				7F1BC49E1D524F9200DD9DD9 /* Utils */,
@@ -510,6 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F1BC4AC1D528BCA00DD9DD9 /* UcalcViewController.swift in Sources */,
 				3949C1C71D4C023600ECA06E /* SecondViewController.swift in Sources */,
 				7F1BC4A31D52520600DD9DD9 /* ThemeColors.swift in Sources */,
 				393155A81D50128F0010A01E /* SemesterTableViewCell.swift in Sources */,

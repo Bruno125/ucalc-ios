@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuickPickerViewController: UIViewController {
+class QuickPickerViewController: UcalcViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
