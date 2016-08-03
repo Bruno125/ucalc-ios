@@ -8,17 +8,52 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
-
+class ProfileViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
+    
+    @IBOutlet weak var colorPicker: UIPickerView!
+    
+    var colors = ThemeColors.asList()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        colorPicker.reloadAllComponents()
+        setupPicker()
+        
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    private func setupPicker(){
+        let current = ThemeHelper.defaultColor()
+        var index = 0
+        for i in 0...colors.count{
+            if current.label == colors[i].label{
+                index = i
+                break;
+            }
+        }
+        colorPicker.selectRow(index, inComponent: 0, animated: false)
+    }
+    
+    
+    // MARK: - Picker Delegate & DataSource
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return colors.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return colors[row].label
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        ThemeHelper.saveColor(colors[row])
+        AppDelegate.resetTabs()
+        
     }
     
 

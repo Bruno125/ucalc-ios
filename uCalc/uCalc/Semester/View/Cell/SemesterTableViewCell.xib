@@ -58,10 +58,10 @@
                                 <rect key="frame" x="8" y="139" width="288" height="6"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbD-cB-fAK">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="6"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="6"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" id="zax-45-mn3"/>
+                                            <constraint firstAttribute="width" constant="100" id="zax-45-mn3"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -260,7 +260,7 @@
                 <outlet property="containerView" destination="75d-by-LFb" id="ZWp-Ve-iJn"/>
                 <outlet property="creditsLabel" destination="48O-HH-DnI" id="ncg-h8-olG"/>
                 <outlet property="firstItemLabel" destination="mgU-gd-ppw" id="LnC-sN-m83"/>
-                <outlet property="percentajeIndicatorView" destination="EZg-cS-JdA" id="NQo-0W-rbD"/>
+                <outlet property="percentajeIndicatorView" destination="gbD-cB-fAK" id="xkW-DF-MoZ"/>
                 <outlet property="percentajeLabel" destination="SI9-bc-NpL" id="nV6-Vl-sSI"/>
                 <outlet property="percentajeWidthConstraint" destination="zax-45-mn3" id="rTv-D9-f8O"/>
                 <outlet property="secondItemLabel" destination="ZbZ-Mj-ohg" id="xTu-dl-haG"/>

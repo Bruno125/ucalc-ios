@@ -26,16 +26,20 @@ class SemesterTableViewCell: UITableViewCell {
     
     
     var mSemester : Semester?
+    let color = ThemeHelper.defaultColor()
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
-        
+        //Set card shadow
         containerView.layer.masksToBounds = false;
         containerView.layer.shadowOffset = CGSizeMake(0, 4);
         containerView.layer.shadowRadius = 3;
         containerView.layer.shadowOpacity = 0.3;
+        
+        //Set items default color
+        percentajeIndicatorView.backgroundColor = color.mainDarkColor
+        creditsLabel.textColor = color.mainColor
+        
         
     }
 

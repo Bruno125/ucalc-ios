@@ -10,19 +10,25 @@ import UIKit
 
 class ThemeHelper: NSObject {
     
-    static let mapper = [
-        ThemeColors.Blue().label : ThemeColors.Blue(),
-        ThemeColors.Green().label : ThemeColors.Green(),
-        ThemeColors.Red().label : ThemeColors.Red(),
-        ThemeColors.Pink().label : ThemeColors.Pink(),
-        ThemeColors.Purple().label : ThemeColors.Purple(),
-        ThemeColors.Gray().label : ThemeColors.Gray(),
-        ThemeColors.Orange().label : ThemeColors.Orange(),
-    ]
     
-    static func defaultColor() {
-        
-        
+    private static let PREF_THEME_COLOR = "theme_color"
+    
+    static func defaultColor() -> BaseColor{
+        let color = NSUserDefaults.standardUserDefaults().stringForKey(PREF_THEME_COLOR)
+        if color == nil {
+            return ThemeColors.Blue()
+        }
+        return ThemeColors.colorForIdentifier(color!)
+    }
+    
+    static func saveColor(color : BaseColor) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(color.label, forKey: PREF_THEME_COLOR)
+    }
+    
+    static func updateTabAppeareance() {
+        let appearance = UITabBar.appearance()
+        appearance.tintColor = defaultColor().mainColor
         
     }
     

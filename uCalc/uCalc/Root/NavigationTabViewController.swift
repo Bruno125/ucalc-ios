@@ -50,7 +50,7 @@ class NavigationTabViewController: UINavigationController {
         case Tabs.Profile:
             firstController = storyboard!.instantiateViewControllerWithIdentifier("ProfileViewController")
             firstController!.tabBarItem.title = NSLocalizedString("Profile", comment: "")
-            firstController!.tabBarItem.image = UIImage(named: "ic_student")
+            firstController!.tabBarItem.image = UIImage(named: "ic_student_filled")
         }
         
         if firstController == nil{

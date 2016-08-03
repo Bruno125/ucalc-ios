@@ -54,8 +54,25 @@
                     <view key="view" contentMode="scaleToFill" id="Tx9-ih-QTQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLK-IV-9v1">
+                                <rect key="frame" x="0.0" y="192" width="600" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="v4P-eh-gga" id="zKO-uv-C8w"/>
+                                    <outlet property="delegate" destination="v4P-eh-gga" id="NI7-QO-Cb1"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aLK-IV-9v1" firstAttribute="centerY" secondItem="Tx9-ih-QTQ" secondAttribute="centerY" id="XrT-qn-4uq"/>
+                            <constraint firstItem="aLK-IV-9v1" firstAttribute="leading" secondItem="Tx9-ih-QTQ" secondAttribute="leading" id="d2W-zn-72q"/>
+                            <constraint firstAttribute="trailing" secondItem="aLK-IV-9v1" secondAttribute="trailing" id="rAF-eH-h38"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorPicker" destination="aLK-IV-9v1" id="vSy-hy-gs6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFo-2W-03a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,7 +100,7 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
-                <tabBarController id="49e-Tb-3d3" customClass="RootTabBarController" customModule="uCalc" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="RootTabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="49e-Tb-3d3" customClass="RootTabBarController" customModule="uCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>

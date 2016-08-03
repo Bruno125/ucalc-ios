@@ -17,6 +17,28 @@ protocol BaseColor {
 
 class ThemeColors {
     
+    private static var mapper = [String : BaseColor]()
+    
+    static func asList() -> [BaseColor]{
+        return [ Blue(), Pink(), Green(), Red(), Purple(), Gray(), Orange() ]
+    }
+    
+    static func asDict() -> [String : BaseColor] {
+        if mapper.count < 1 {
+            let colors = asList()
+            for color in colors{
+                mapper[color.label] = color
+            }
+        }
+        return mapper
+    }
+    
+    
+    static func colorForIdentifier(identifier : String) -> BaseColor{
+        return asDict()[identifier]!
+    }
+    
+    
     class Red : BaseColor {
         let mainColor: UIColor = UIColor(netHex: 0xF44336)
         let mainDarkColor: UIColor = UIColor(netHex: 0xD32F2F)

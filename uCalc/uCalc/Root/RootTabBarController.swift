@@ -18,18 +18,23 @@ class RootTabBarController: UITabBarController {
     
     /// Initialize the main application tabs
     func setTabs(){
+        setTabsWithSelectedIndex(0)
         
+    }
+    
+    func setTabsWithSelectedIndex(index : Int) {
         //Set tabs appeareance
         self.navigationController?.navigationBar.translucent = true
         self.navigationController?.navigationBar.opaque = true
         let appearance = UITabBar.appearance()
         appearance.translucent = true;
         appearance.opaque = false;
-        appearance.tintColor = UIColor.redColor()
+        ThemeHelper.updateTabAppeareance()
         
         //Create a navigation controller for each option
         var controller : NavigationTabViewController?
         var controllers = [NavigationTabViewController]()
+        
         for tab in mTabs {
             switch tab {
             case Tabs.Semesters,
@@ -41,14 +46,16 @@ class RootTabBarController: UITabBarController {
             }
             
             controllers.append(controller!)
-            
         }
         
         //Set custom controllers
         viewControllers = controllers
-        
+
+        //Set selected controller
+        if index < mTabs.count {
+            selectedViewController = viewControllers![index]
+        }
         
     }
-    
     
 }

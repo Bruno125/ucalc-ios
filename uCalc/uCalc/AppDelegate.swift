@@ -41,6 +41,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    // MARK: - Own functions
+    
+    static func resetTabs () {
+        if let root = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("RootTabBarController") as? RootTabBarController{
+            var selected = 0
+            if ((UIApplication.sharedApplication().delegate?.window?!.rootViewController?.isKindOfClass(RootTabBarController)) != nil) {
+               let currentRoot = UIApplication.sharedApplication().delegate?.window?!.rootViewController as! RootTabBarController
+                selected = currentRoot.selectedIndex
+            }
+            root.setTabsWithSelectedIndex(selected)
+            UIApplication.sharedApplication().delegate?.window?!.rootViewController = root
+        }
+    }
+    
+    
 
 }
 
