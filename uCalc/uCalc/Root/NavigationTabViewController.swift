@@ -42,15 +42,15 @@ class NavigationTabViewController: UINavigationController {
         case Tabs.Semesters:
             firstController = storyboard!.instantiateViewControllerWithIdentifier("SemestersViewController")
             firstController!.tabBarItem.title = NSLocalizedString("Semesters", comment: "")
-            firstController!.tabBarItem.image = UIImage(named: "")
+            firstController!.tabBarItem.image = UIImage(named: "ic_class")
         case Tabs.Quick:
             firstController = storyboard!.instantiateViewControllerWithIdentifier("QuickPickerViewController")
             firstController!.tabBarItem.title = NSLocalizedString("Quick calculus", comment: "")
-            firstController!.tabBarItem.image = UIImage(named: "")
+            firstController!.tabBarItem.image = UIImage(named: "ic_update")
         case Tabs.Profile:
             firstController = storyboard!.instantiateViewControllerWithIdentifier("ProfileViewController")
             firstController!.tabBarItem.title = NSLocalizedString("Profile", comment: "")
-            firstController!.tabBarItem.image = UIImage(named: "")
+            firstController!.tabBarItem.image = UIImage(named: "ic_student")
         }
         
         if firstController == nil{

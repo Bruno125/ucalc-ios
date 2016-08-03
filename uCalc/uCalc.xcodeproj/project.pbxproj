@@ -23,6 +23,7 @@
 		7F1BC48F1D5234C100DD9DD9 /* NavigationTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC48E1D5234C100DD9DD9 /* NavigationTabViewController.swift */; };
 		7F1BC4961D5245DD00DD9DD9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC4951D5245DD00DD9DD9 /* ProfileViewController.swift */; };
 		7F1BC49D1D52465800DD9DD9 /* QuickPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC49C1D52465800DD9DD9 /* QuickPickerViewController.swift */; };
+		7F1BC4A01D524FE600DD9DD9 /* TintedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC49F1D524FE600DD9DD9 /* TintedImage.swift */; };
 		7F33B9BF1D50F87B009B60FA /* airglyphs.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F33B9BB1D50F87B009B60FA /* airglyphs.ttf */; };
 		7F33B9C01D50F87B009B60FA /* circular_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F33B9BC1D50F87B009B60FA /* circular_bold.otf */; };
 		7F33B9C11D50F87B009B60FA /* circular_book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F33B9BD1D50F87B009B60FA /* circular_book.otf */; };
@@ -51,6 +52,7 @@
 		7F1BC48E1D5234C100DD9DD9 /* NavigationTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationTabViewController.swift; path = Root/NavigationTabViewController.swift; sourceTree = "<group>"; };
 		7F1BC4951D5245DD00DD9DD9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Profile/ViewController/ProfileViewController.swift; sourceTree = "<group>"; };
 		7F1BC49C1D52465800DD9DD9 /* QuickPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuickPickerViewController.swift; path = "Quick calculus/ViewController/QuickPickerViewController.swift"; sourceTree = "<group>"; };
+		7F1BC49F1D524FE600DD9DD9 /* TintedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TintedImage.swift; path = Configuration/Utils/TintedImage.swift; sourceTree = "<group>"; };
 		7F33B9BB1D50F87B009B60FA /* airglyphs.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = airglyphs.ttf; path = Configuration/Font/airglyphs.ttf; sourceTree = "<group>"; };
 		7F33B9BC1D50F87B009B60FA /* circular_bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = circular_bold.otf; path = Configuration/Font/circular_bold.otf; sourceTree = "<group>"; };
 		7F33B9BD1D50F87B009B60FA /* circular_book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = circular_book.otf; path = Configuration/Font/circular_book.otf; sourceTree = "<group>"; };
@@ -229,6 +231,14 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		7F1BC49E1D524F9200DD9DD9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7F1BC49F1D524FE600DD9DD9 /* TintedImage.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		7F33B9BA1D50F862009B60FA /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +286,7 @@
 		7F3A5D171D4FAB0300CE0349 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				7F1BC49E1D524F9200DD9DD9 /* Utils */,
 				7F33B9BA1D50F862009B60FA /* Font */,
 				7F3A5D261D4FAC8D00CE0349 /* Model */,
 			);
@@ -487,6 +498,7 @@
 				7F1BC4961D5245DD00DD9DD9 /* ProfileViewController.swift in Sources */,
 				392AF9221D4FEED300A91F92 /* Semester.swift in Sources */,
 				7F1BC49D1D52465800DD9DD9 /* QuickPickerViewController.swift in Sources */,
+				7F1BC4A01D524FE600DD9DD9 /* TintedImage.swift in Sources */,
 				7F33B9C91D51073B009B60FA /* RootTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
