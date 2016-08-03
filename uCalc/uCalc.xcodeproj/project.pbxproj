@@ -20,12 +20,16 @@
 		3949C1CC1D4C023600ECA06E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3949C1CB1D4C023600ECA06E /* Assets.xcassets */; };
 		3949C1CF1D4C023600ECA06E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3949C1CD1D4C023600ECA06E /* LaunchScreen.storyboard */; };
 		6F3DDBC5F559E07668FE8AAA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7EF0CF04E05F748B7B6429 /* Pods.framework */; };
+		7F1BC48F1D5234C100DD9DD9 /* NavigationTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC48E1D5234C100DD9DD9 /* NavigationTabViewController.swift */; };
+		7F1BC4961D5245DD00DD9DD9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC4951D5245DD00DD9DD9 /* ProfileViewController.swift */; };
+		7F1BC49D1D52465800DD9DD9 /* QuickPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC49C1D52465800DD9DD9 /* QuickPickerViewController.swift */; };
 		7F33B9BF1D50F87B009B60FA /* airglyphs.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F33B9BB1D50F87B009B60FA /* airglyphs.ttf */; };
 		7F33B9C01D50F87B009B60FA /* circular_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F33B9BC1D50F87B009B60FA /* circular_bold.otf */; };
 		7F33B9C11D50F87B009B60FA /* circular_book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F33B9BD1D50F87B009B60FA /* circular_book.otf */; };
 		7F33B9C21D50F87B009B60FA /* circular_light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F33B9BE1D50F87B009B60FA /* circular_light.otf */; };
 		7F33B9C41D50F91A009B60FA /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33B9C31D50F91A009B60FA /* FontHelper.swift */; };
 		7F33B9C61D50FD47009B60FA /* ViewFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33B9C51D50FD47009B60FA /* ViewFontExtensions.swift */; };
+		7F33B9C91D51073B009B60FA /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33B9C81D51073B009B60FA /* RootTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,12 +48,16 @@
 		3949C1CB1D4C023600ECA06E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3949C1CE1D4C023600ECA06E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3949C1D01D4C023600ECA06E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F1BC48E1D5234C100DD9DD9 /* NavigationTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationTabViewController.swift; path = Root/NavigationTabViewController.swift; sourceTree = "<group>"; };
+		7F1BC4951D5245DD00DD9DD9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Profile/ViewController/ProfileViewController.swift; sourceTree = "<group>"; };
+		7F1BC49C1D52465800DD9DD9 /* QuickPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuickPickerViewController.swift; path = "Quick calculus/ViewController/QuickPickerViewController.swift"; sourceTree = "<group>"; };
 		7F33B9BB1D50F87B009B60FA /* airglyphs.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = airglyphs.ttf; path = Configuration/Font/airglyphs.ttf; sourceTree = "<group>"; };
 		7F33B9BC1D50F87B009B60FA /* circular_bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = circular_bold.otf; path = Configuration/Font/circular_bold.otf; sourceTree = "<group>"; };
 		7F33B9BD1D50F87B009B60FA /* circular_book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = circular_book.otf; path = Configuration/Font/circular_book.otf; sourceTree = "<group>"; };
 		7F33B9BE1D50F87B009B60FA /* circular_light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = circular_light.otf; path = Configuration/Font/circular_light.otf; sourceTree = "<group>"; };
 		7F33B9C31D50F91A009B60FA /* FontHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FontHelper.swift; path = Configuration/Font/FontHelper.swift; sourceTree = "<group>"; };
 		7F33B9C51D50FD47009B60FA /* ViewFontExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFontExtensions.swift; sourceTree = "<group>"; };
+		7F33B9C81D51073B009B60FA /* RootTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootTabBarController.swift; path = Root/RootTabBarController.swift; sourceTree = "<group>"; };
 		8A7EF0CF04E05F748B7B6429 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F04060EE000B88DD79499C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,8 +142,10 @@
 		3949C1C11D4C023600ECA06E /* uCalc */ = {
 			isa = PBXGroup;
 			children = (
+				7F33B9C71D510708009B60FA /* Root */,
 				7F3A5D151D4FAAC700CE0349 /* Semester */,
 				7F3A5D161D4FAAEF00CE0349 /* Course */,
+				7F1BC4971D5245F000DD9DD9 /* Quick calculus */,
 				7F3A5D191D4FAB4300CE0349 /* Profile */,
 				7F3A5D181D4FAB3600CE0349 /* Onboarding */,
 				7F3A5D171D4FAB0300CE0349 /* Configuration */,
@@ -150,6 +160,75 @@
 			path = uCalc;
 			sourceTree = "<group>";
 		};
+		7F1BC4901D52455700DD9DD9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7F1BC4921D52456B00DD9DD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7F1BC4931D52457600DD9DD9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7F1BC4951D5245DD00DD9DD9 /* ProfileViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		7F1BC4941D5245A200DD9DD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7F1BC4971D5245F000DD9DD9 /* Quick calculus */ = {
+			isa = PBXGroup;
+			children = (
+				7F1BC49B1D52461200DD9DD9 /* Controller */,
+				7F1BC49A1D52460D00DD9DD9 /* Model */,
+				7F1BC4991D52460600DD9DD9 /* View */,
+				7F1BC4981D5245FE00DD9DD9 /* ViewController */,
+			);
+			name = "Quick calculus";
+			sourceTree = "<group>";
+		};
+		7F1BC4981D5245FE00DD9DD9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7F1BC49C1D52465800DD9DD9 /* QuickPickerViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		7F1BC4991D52460600DD9DD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7F1BC49A1D52460D00DD9DD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7F1BC49B1D52461200DD9DD9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		7F33B9BA1D50F862009B60FA /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +240,15 @@
 				7F33B9BE1D50F87B009B60FA /* circular_light.otf */,
 			);
 			name = Font;
+			sourceTree = "<group>";
+		};
+		7F33B9C71D510708009B60FA /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				7F33B9C81D51073B009B60FA /* RootTabBarController.swift */,
+				7F1BC48E1D5234C100DD9DD9 /* NavigationTabViewController.swift */,
+			);
+			name = Root;
 			sourceTree = "<group>";
 		};
 		7F3A5D151D4FAAC700CE0349 /* Semester */ = {
@@ -204,6 +292,10 @@
 		7F3A5D191D4FAB4300CE0349 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				7F1BC4901D52455700DD9DD9 /* Controller */,
+				7F1BC4921D52456B00DD9DD9 /* Model */,
+				7F1BC4941D5245A200DD9DD9 /* View */,
+				7F1BC4931D52457600DD9DD9 /* ViewController */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -384,6 +476,7 @@
 			files = (
 				3949C1C71D4C023600ECA06E /* SecondViewController.swift in Sources */,
 				393155A81D50128F0010A01E /* SemesterTableViewCell.swift in Sources */,
+				7F1BC48F1D5234C100DD9DD9 /* NavigationTabViewController.swift in Sources */,
 				3949C1C31D4C023600ECA06E /* AppDelegate.swift in Sources */,
 				7F33B9C61D50FD47009B60FA /* ViewFontExtensions.swift in Sources */,
 				7F33B9C41D50F91A009B60FA /* FontHelper.swift in Sources */,
@@ -391,7 +484,10 @@
 				393155A41D5010630010A01E /* SemestersViewController.swift in Sources */,
 				392ED14B1D50008400E65629 /* Evaluation.swift in Sources */,
 				3949C1C51D4C023600ECA06E /* FirstViewController.swift in Sources */,
+				7F1BC4961D5245DD00DD9DD9 /* ProfileViewController.swift in Sources */,
 				392AF9221D4FEED300A91F92 /* Semester.swift in Sources */,
+				7F1BC49D1D52465800DD9DD9 /* QuickPickerViewController.swift in Sources */,
+				7F33B9C91D51073B009B60FA /* RootTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

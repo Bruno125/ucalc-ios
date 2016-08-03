@@ -35,7 +35,7 @@ class SemesterTableViewCell: UITableViewCell {
         containerView.layer.masksToBounds = false;
         containerView.layer.shadowOffset = CGSizeMake(0, 4);
         containerView.layer.shadowRadius = 3;
-        containerView.layer.shadowOpacity = 0.5;
+        containerView.layer.shadowOpacity = 0.3;
         
     }
 
