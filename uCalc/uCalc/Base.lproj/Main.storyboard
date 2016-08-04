@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Semesters-->
@@ -25,12 +26,56 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="kcp-gf-zSC"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94f-8U-hb4">
+                                <rect key="frame" x="20" y="224" width="560" height="152"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bj-UY-k58" customClass="RoundedButton" customModule="uCalc" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="76" width="200" height="56"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="8Zt-zo-u6X"/>
+                                            <constraint firstAttribute="height" constant="56" id="RX3-jo-OG3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Add semester">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't added any semesters yet! Add one using the button below or the one on the top right corner" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsO-hf-XP7">
+                                        <rect key="frame" x="20" y="15" width="520" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="style" value="light"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1bj-UY-k58" secondAttribute="bottom" constant="20" id="3Qi-tB-7X9"/>
+                                    <constraint firstAttribute="trailing" secondItem="IsO-hf-XP7" secondAttribute="trailing" constant="20" id="G59-PO-q9B"/>
+                                    <constraint firstItem="1bj-UY-k58" firstAttribute="centerX" secondItem="94f-8U-hb4" secondAttribute="centerX" id="Z2H-Wd-PBu"/>
+                                    <constraint firstItem="IsO-hf-XP7" firstAttribute="leading" secondItem="94f-8U-hb4" secondAttribute="leading" constant="20" id="Zss-4M-5R7"/>
+                                    <constraint firstItem="IsO-hf-XP7" firstAttribute="top" secondItem="94f-8U-hb4" secondAttribute="top" constant="15" id="b07-j5-wZw"/>
+                                    <constraint firstItem="1bj-UY-k58" firstAttribute="top" secondItem="IsO-hf-XP7" secondAttribute="bottom" constant="18" id="fxO-FK-hy5"/>
+                                    <constraint firstAttribute="height" constant="350" id="uxM-vD-Ony"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="uxM-vD-Ony"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="94f-8U-hb4" secondAttribute="trailing" id="G7V-yo-weN"/>
                             <constraint firstAttribute="trailing" secondItem="ITH-8b-GCQ" secondAttribute="trailing" id="Kh8-Lh-cEH"/>
                             <constraint firstItem="ITH-8b-GCQ" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" constant="20" id="XLC-Wv-vTX"/>
                             <constraint firstItem="ITH-8b-GCQ" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="iJH-99-xDv"/>
+                            <constraint firstItem="94f-8U-hb4" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="kwC-nU-Jac"/>
+                            <constraint firstItem="94f-8U-hb4" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="uBP-ol-EGa"/>
                             <constraint firstItem="ITH-8b-GCQ" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="ydx-7D-YdU"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="ITH-8b-GCQ" secondAttribute="bottom" id="zIs-gZ-GGK"/>
                         </constraints>

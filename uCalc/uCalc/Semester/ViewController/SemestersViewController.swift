@@ -27,7 +27,7 @@ class SemestersViewController: UcalcViewController,UITableViewDelegate,UITableVi
             let semester = Semester()
             semester.name = "Semester \(i)"
             
-            semesters.append(semester)
+            //semesters.append(semester)
         }
         
         
