@@ -35,6 +35,10 @@
 		7F33B9C41D50F91A009B60FA /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33B9C31D50F91A009B60FA /* FontHelper.swift */; };
 		7F33B9C61D50FD47009B60FA /* ViewFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33B9C51D50FD47009B60FA /* ViewFontExtensions.swift */; };
 		7F33B9C91D51073B009B60FA /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33B9C81D51073B009B60FA /* RootTabBarController.swift */; };
+		7FCE923C1D5345AE00287E44 /* AddSemesterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCE923B1D5345AE00287E44 /* AddSemesterView.swift */; };
+		7FCE923E1D5345BC00287E44 /* AddSemesterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FCE923D1D5345BC00287E44 /* AddSemesterView.xib */; };
+		7FCE92421D5346A800287E44 /* BlurredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCE92411D5346A800287E44 /* BlurredView.swift */; };
+		7FCE92441D5359E700287E44 /* UiUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCE92431D5359E700287E44 /* UiUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +72,10 @@
 		7F33B9C31D50F91A009B60FA /* FontHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FontHelper.swift; path = Configuration/Font/FontHelper.swift; sourceTree = "<group>"; };
 		7F33B9C51D50FD47009B60FA /* ViewFontExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFontExtensions.swift; sourceTree = "<group>"; };
 		7F33B9C81D51073B009B60FA /* RootTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootTabBarController.swift; path = Root/RootTabBarController.swift; sourceTree = "<group>"; };
+		7FCE923B1D5345AE00287E44 /* AddSemesterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddSemesterView.swift; path = Semester/View/AddSemesterView.swift; sourceTree = "<group>"; };
+		7FCE923D1D5345BC00287E44 /* AddSemesterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddSemesterView.xib; path = Semester/View/AddSemesterView.xib; sourceTree = "<group>"; };
+		7FCE92411D5346A800287E44 /* BlurredView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlurredView.swift; path = Common/View/BlurredView.swift; sourceTree = "<group>"; };
+		7FCE92431D5359E700287E44 /* UiUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UiUtils.swift; path = Configuration/Utils/UiUtils.swift; sourceTree = "<group>"; };
 		8A7EF0CF04E05F748B7B6429 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F04060EE000B88DD79499C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +166,7 @@
 				7F1BC4971D5245F000DD9DD9 /* Quick calculus */,
 				7F3A5D191D4FAB4300CE0349 /* Profile */,
 				7F3A5D181D4FAB3600CE0349 /* Onboarding */,
+				7FCE923F1D53467100287E44 /* Common */,
 				7F3A5D171D4FAB0300CE0349 /* Configuration */,
 				3949C1C21D4C023600ECA06E /* AppDelegate.swift */,
 				3949C1C41D4C023600ECA06E /* FirstViewController.swift */,
@@ -243,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				7F1BC49F1D524FE600DD9DD9 /* TintedImage.swift */,
+				7FCE92431D5359E700287E44 /* UiUtils.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -351,6 +361,8 @@
 			isa = PBXGroup;
 			children = (
 				393155A51D5012690010A01E /* Cell */,
+				7FCE923B1D5345AE00287E44 /* AddSemesterView.swift */,
+				7FCE923D1D5345BC00287E44 /* AddSemesterView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -383,6 +395,22 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		7FCE923F1D53467100287E44 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7FCE92401D53468700287E44 /* View */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		7FCE92401D53468700287E44 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7FCE92411D5346A800287E44 /* BlurredView.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		9713D58FE1FEAF5BEA6C2011 /* Pods */ = {
@@ -459,6 +487,7 @@
 				7F33B9C01D50F87B009B60FA /* circular_bold.otf in Resources */,
 				393155A91D50128F0010A01E /* SemesterTableViewCell.xib in Resources */,
 				7F33B9C11D50F87B009B60FA /* circular_book.otf in Resources */,
+				7FCE923E1D5345BC00287E44 /* AddSemesterView.xib in Resources */,
 				3949C1CC1D4C023600ECA06E /* Assets.xcassets in Resources */,
 				7F33B9C21D50F87B009B60FA /* circular_light.otf in Resources */,
 				3949C1CA1D4C023600ECA06E /* Main.storyboard in Resources */,
@@ -521,6 +550,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FCE923C1D5345AE00287E44 /* AddSemesterView.swift in Sources */,
 				7F1BC4AC1D528BCA00DD9DD9 /* UcalcViewController.swift in Sources */,
 				3949C1C71D4C023600ECA06E /* SecondViewController.swift in Sources */,
 				7F1BC4A31D52520600DD9DD9 /* ThemeColors.swift in Sources */,
@@ -531,6 +561,7 @@
 				7F33B9C41D50F91A009B60FA /* FontHelper.swift in Sources */,
 				392ED1491D4FFDA600E65629 /* Course.swift in Sources */,
 				393155A41D5010630010A01E /* SemestersViewController.swift in Sources */,
+				7FCE92441D5359E700287E44 /* UiUtils.swift in Sources */,
 				7F1BC4A81D52598400DD9DD9 /* ThemeHelper.swift in Sources */,
 				392ED14B1D50008400E65629 /* Evaluation.swift in Sources */,
 				3949C1C51D4C023600ECA06E /* FirstViewController.swift in Sources */,
@@ -540,6 +571,7 @@
 				7F1BC49D1D52465800DD9DD9 /* QuickPickerViewController.swift in Sources */,
 				7F1BC4A01D524FE600DD9DD9 /* TintedImage.swift in Sources */,
 				7F33B9C91D51073B009B60FA /* RootTabBarController.swift in Sources */,
+				7FCE92421D5346A800287E44 /* BlurredView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

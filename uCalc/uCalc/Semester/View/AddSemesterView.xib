@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="AddSemesterView" id="iN0-l3-epB" customClass="AddSemesterView" customModule="uCalc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="477" height="591"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XnI-ap-xJk">
+                    <rect key="frame" x="0.0" y="0.0" width="477" height="591"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SDh-1g-pdK">
+                        <rect key="frame" x="0.0" y="0.0" width="477" height="591"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="width" id="wUA-6s-y8P"/>
+                    </constraints>
+                    <blurEffect style="dark"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="wUA-6s-y8P"/>
+                        </mask>
+                    </variation>
+                </visualEffectView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWx-fl-rQu">
+                    <rect key="frame" x="10" y="190" width="457" height="211"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="semester name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZK-uB-WJf">
+                            <rect key="frame" x="65" y="20" width="372" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="regular" value="regular"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_update" translatesAutoresizingMaskIntoConstraints="NO" id="BBm-Vh-jMI">
+                            <rect key="frame" x="20" y="41" width="25" height="25"/>
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="ZX3-dv-aAw"/>
+                                <constraint firstAttribute="width" constant="25" id="trV-c8-bON"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="i.e: 2016-01" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IvW-At-lR9">
+                            <rect key="frame" x="65" y="41" width="372" height="25"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="iTv-Th-nPp"/>
+                            </connections>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aproximate semester final grade?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kw5-L8-NHC">
+                            <rect key="frame" x="53" y="101" width="384" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="style" value="light"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aproximate course final grade?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQd-dR-UPO">
+                            <rect key="frame" x="53" y="134" width="384" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="style" value="light"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OET-Jt-F3A">
+                            <rect key="frame" x="20" y="97" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="5La-aU-34Q"/>
+                                <constraint firstAttribute="width" constant="25" id="BYz-1Z-ZOH"/>
+                            </constraints>
+                            <connections>
+                                <action selector="checkBoxTouchUp:" destination="iN0-l3-epB" eventType="touchUpInside" id="gGt-5I-Ltk"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNn-tp-hyP">
+                            <rect key="frame" x="20" y="130" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="ecb-6D-zfp"/>
+                                <constraint firstAttribute="width" constant="25" id="nMR-AP-ooU"/>
+                            </constraints>
+                            <connections>
+                                <action selector="checkBoxTouchUp:" destination="iN0-l3-epB" eventType="touchUpInside" id="eoZ-Pb-mPJ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="kw5-L8-NHC" firstAttribute="trailing" secondItem="IvW-At-lR9" secondAttribute="trailing" id="0v3-Nr-hag"/>
+                        <constraint firstItem="lNn-tp-hyP" firstAttribute="centerY" secondItem="iQd-dR-UPO" secondAttribute="centerY" id="29f-3U-PcO"/>
+                        <constraint firstItem="BBm-Vh-jMI" firstAttribute="top" secondItem="ZZK-uB-WJf" secondAttribute="bottom" constant="6" id="9m0-Ta-jjh"/>
+                        <constraint firstItem="OET-Jt-F3A" firstAttribute="top" secondItem="BBm-Vh-jMI" secondAttribute="bottom" constant="31" id="BUc-s8-a3F"/>
+                        <constraint firstAttribute="bottom" secondItem="iQd-dR-UPO" secondAttribute="bottom" constant="60" id="GNs-fO-ZKz"/>
+                        <constraint firstItem="ZZK-uB-WJf" firstAttribute="leading" secondItem="IvW-At-lR9" secondAttribute="leading" id="JdR-C5-TDh"/>
+                        <constraint firstItem="kw5-L8-NHC" firstAttribute="leading" secondItem="OET-Jt-F3A" secondAttribute="trailing" constant="8" id="Lvu-Td-6G4"/>
+                        <constraint firstItem="IvW-At-lR9" firstAttribute="leading" secondItem="BBm-Vh-jMI" secondAttribute="trailing" constant="20" id="Ndc-KI-Z9w"/>
+                        <constraint firstItem="IvW-At-lR9" firstAttribute="height" secondItem="BBm-Vh-jMI" secondAttribute="height" id="O0L-8a-ODN"/>
+                        <constraint firstItem="IvW-At-lR9" firstAttribute="centerY" secondItem="BBm-Vh-jMI" secondAttribute="centerY" id="OlI-fa-1Nz"/>
+                        <constraint firstItem="lNn-tp-hyP" firstAttribute="leading" secondItem="OET-Jt-F3A" secondAttribute="leading" id="UON-PA-W3L"/>
+                        <constraint firstAttribute="trailing" secondItem="IvW-At-lR9" secondAttribute="trailing" constant="20" id="ZqC-zM-iy6"/>
+                        <constraint firstItem="kw5-L8-NHC" firstAttribute="centerY" secondItem="OET-Jt-F3A" secondAttribute="centerY" id="bzk-MC-XVy"/>
+                        <constraint firstItem="ZZK-uB-WJf" firstAttribute="trailing" secondItem="IvW-At-lR9" secondAttribute="trailing" id="dpe-Be-maO"/>
+                        <constraint firstItem="OET-Jt-F3A" firstAttribute="leading" secondItem="BBm-Vh-jMI" secondAttribute="leading" id="kRq-vo-ntP"/>
+                        <constraint firstItem="iQd-dR-UPO" firstAttribute="trailing" secondItem="kw5-L8-NHC" secondAttribute="trailing" id="nkc-l7-7pv"/>
+                        <constraint firstAttribute="height" constant="300" id="o9B-Uj-noJ"/>
+                        <constraint firstItem="iQd-dR-UPO" firstAttribute="leading" secondItem="lNn-tp-hyP" secondAttribute="trailing" constant="8" id="qfC-ui-xSe"/>
+                        <constraint firstItem="ZZK-uB-WJf" firstAttribute="top" secondItem="gWx-fl-rQu" secondAttribute="top" constant="20" id="rny-HA-g9Q"/>
+                        <constraint firstItem="lNn-tp-hyP" firstAttribute="top" secondItem="OET-Jt-F3A" secondAttribute="bottom" constant="8" id="vqQ-5H-7B8"/>
+                        <constraint firstItem="BBm-Vh-jMI" firstAttribute="leading" secondItem="gWx-fl-rQu" secondAttribute="leading" constant="20" id="z3z-mI-KyX"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="o9B-Uj-noJ"/>
+                        </mask>
+                    </variation>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUb-AM-z8l">
+                    <rect key="frame" x="138" y="373" width="200" height="56"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="EeE-Ra-mBd"/>
+                        <constraint firstAttribute="width" constant="200" id="OGT-iS-7F2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="Save semester">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="28"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="regular"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="saveTouchUp:" destination="iN0-l3-epB" eventType="touchUpInside" id="Bzd-vr-6Zp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97y-ke-rVN">
+                    <rect key="frame" x="141" y="469" width="194" height="30"/>
+                    <state key="normal" title="Cancel and discard changes"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="regular"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="cancelTouchUp:" destination="iN0-l3-epB" eventType="touchUpInside" id="7yq-K3-bRe"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="gWx-fl-rQu" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4PJ-Dd-9WH"/>
+                <constraint firstItem="oUb-AM-z8l" firstAttribute="top" secondItem="gWx-fl-rQu" secondAttribute="bottom" constant="-28" id="BUA-jd-bt8"/>
+                <constraint firstItem="97y-ke-rVN" firstAttribute="top" secondItem="oUb-AM-z8l" secondAttribute="bottom" constant="40" id="Cjl-4a-xnE"/>
+                <constraint firstItem="XnI-ap-xJk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GKo-ys-f6D"/>
+                <constraint firstItem="97y-ke-rVN" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="csC-vN-sjA"/>
+                <constraint firstAttribute="trailing" secondItem="XnI-ap-xJk" secondAttribute="trailing" id="j8C-jA-PXk"/>
+                <constraint firstItem="gWx-fl-rQu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="lSW-rT-gzr"/>
+                <constraint firstItem="oUb-AM-z8l" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lmf-0t-Ww7"/>
+                <constraint firstAttribute="bottom" secondItem="XnI-ap-xJk" secondAttribute="bottom" id="peI-xX-yXQ"/>
+                <constraint firstItem="XnI-ap-xJk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="u2q-qZ-1Uy"/>
+                <constraint firstAttribute="trailing" secondItem="gWx-fl-rQu" secondAttribute="trailing" constant="10" id="vkI-yM-2nr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelButton" destination="97y-ke-rVN" id="LEP-aO-eEB"/>
+                <outlet property="containerView" destination="gWx-fl-rQu" id="Nzh-ao-sRi"/>
+                <outlet property="courseCheckButton" destination="lNn-tp-hyP" id="L8d-KG-IdA"/>
+                <outlet property="saveButton" destination="oUb-AM-z8l" id="rmu-Bd-EAe"/>
+                <outlet property="semesterCheckButton" destination="OET-Jt-F3A" id="lMh-Jq-iwl"/>
+                <outlet property="semesterTextField" destination="IvW-At-lR9" id="qhF-2l-4Tu"/>
+                <outlet property="visualEffectView" destination="XnI-ap-xJk" id="VtA-4m-PLK"/>
+            </connections>
+            <point key="canvasLocation" x="788.5" y="806.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_update" width="24" height="24"/>
+    </resources>
+</document>

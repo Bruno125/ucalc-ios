@@ -31,10 +31,8 @@ class SemesterTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         //Set card shadow
-        containerView.layer.masksToBounds = false;
-        containerView.layer.shadowOffset = CGSizeMake(0, 4);
-        containerView.layer.shadowRadius = 3;
-        containerView.layer.shadowOpacity = 0.3;
+        UiUtils.applyShadow(containerView, radius: 3, opacity: 0.3)
+        
         
         //Set items default color
         percentajeIndicatorView.backgroundColor = color.mainDarkColor

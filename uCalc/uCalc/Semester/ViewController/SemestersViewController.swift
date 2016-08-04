@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreGraphics
 
 class SemestersViewController: UcalcViewController,UITableViewDelegate,UITableViewDataSource {
     
@@ -19,7 +20,8 @@ class SemestersViewController: UcalcViewController,UITableViewDelegate,UITableVi
     
     override func viewDidLoad() {
         
-        tableView.registerNib(UINib(nibName: "SemesterTableViewCell",bundle: nil), forCellReuseIdentifier: SemesterTableViewCell.identifier())
+        tableView.registerNib(UINib(nibName: SemesterTableViewCell.identifier(),bundle: nil),
+                              forCellReuseIdentifier: SemesterTableViewCell.identifier())
         
         for i in 0...10{
             let semester = Semester()
@@ -31,7 +33,18 @@ class SemestersViewController: UcalcViewController,UITableViewDelegate,UITableVi
         
         tableView.reloadData()
         
+        setupBarItems()
         
+        
+    }
+    
+    private func setupBarItems() {
+        //Add + button at right
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_add_white"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(showAddDialog))
+    }
+    
+    func showAddDialog(){
+        AddSemesterView.present(self)
     }
     
     

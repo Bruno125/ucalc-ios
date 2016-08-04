@@ -15,7 +15,6 @@ extension UILabel {
         get { return self.font.fontName }
         set {
             self.font = FontHelper.styleFor(newValue, size: self.font.pointSize)
-            self.font = UIFont(name: newValue, size: self.font.pointSize)
         }
     }
     
