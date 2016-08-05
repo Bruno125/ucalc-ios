@@ -40,6 +40,10 @@
 		7F33B9C41D50F91A009B60FA /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33B9C31D50F91A009B60FA /* FontHelper.swift */; };
 		7F33B9C61D50FD47009B60FA /* ViewFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33B9C51D50FD47009B60FA /* ViewFontExtensions.swift */; };
 		7F33B9C91D51073B009B60FA /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33B9C81D51073B009B60FA /* RootTabBarController.swift */; };
+		7F45FCD11D54AAF100CE3E1D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F45FCD31D54AAF100CE3E1D /* Localizable.strings */; };
+		7F45FCD71D54AD8700CE3E1D /* LocalizationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45FCD61D54AD8700CE3E1D /* LocalizationExtensions.swift */; };
+		7F45FCDA1D54B9BF00CE3E1D /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45FCD81D54B9BF00CE3E1D /* OptionTableViewCell.swift */; };
+		7F45FCDB1D54B9BF00CE3E1D /* OptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F45FCD91D54B9BF00CE3E1D /* OptionTableViewCell.xib */; };
 		7FB451031D53A01400567BC6 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB451021D53A01400567BC6 /* RoundedButton.swift */; };
 		7FCE923C1D5345AE00287E44 /* SemesterDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCE923B1D5345AE00287E44 /* SemesterDialogView.swift */; };
 		7FCE923E1D5345BC00287E44 /* SemesterDialogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FCE923D1D5345BC00287E44 /* SemesterDialogView.xib */; };
@@ -83,6 +87,12 @@
 		7F33B9C31D50F91A009B60FA /* FontHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FontHelper.swift; path = Configuration/Font/FontHelper.swift; sourceTree = "<group>"; };
 		7F33B9C51D50FD47009B60FA /* ViewFontExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFontExtensions.swift; sourceTree = "<group>"; };
 		7F33B9C81D51073B009B60FA /* RootTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootTabBarController.swift; path = Root/RootTabBarController.swift; sourceTree = "<group>"; };
+		7F45FCD21D54AAF100CE3E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7F45FCD41D54AAF300CE3E1D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7F45FCD51D54AB2100CE3E1D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7F45FCD61D54AD8700CE3E1D /* LocalizationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizationExtensions.swift; path = Configuration/Localization/LocalizationExtensions.swift; sourceTree = "<group>"; };
+		7F45FCD81D54B9BF00CE3E1D /* OptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionTableViewCell.swift; path = Profile/View/Cell/OptionTableViewCell.swift; sourceTree = "<group>"; };
+		7F45FCD91D54B9BF00CE3E1D /* OptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OptionTableViewCell.xib; path = Profile/View/Cell/OptionTableViewCell.xib; sourceTree = "<group>"; };
 		7FB451021D53A01400567BC6 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedButton.swift; path = Configuration/Categories/RoundedButton.swift; sourceTree = "<group>"; };
 		7FCE923B1D5345AE00287E44 /* SemesterDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemesterDialogView.swift; path = Semester/View/SemesterDialogView.swift; sourceTree = "<group>"; };
 		7FCE923D1D5345BC00287E44 /* SemesterDialogView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SemesterDialogView.xib; path = Semester/View/SemesterDialogView.xib; sourceTree = "<group>"; };
@@ -156,6 +166,8 @@
 			children = (
 				393880831D54CCEB00759435 /* ProfileHeaderTableViewCell.swift */,
 				393880841D54CCEB00759435 /* ProfileHeaderTableViewCell.xib */,
+				7F45FCD81D54B9BF00CE3E1D /* OptionTableViewCell.swift */,
+				7F45FCD91D54B9BF00CE3E1D /* OptionTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -355,6 +367,7 @@
 		7F3A5D171D4FAB0300CE0349 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				7F45FCCE1D54AAB300CE3E1D /* Localization */,
 				7F1BC4A91D528B9500DD9DD9 /* View */,
 				7F1BC4A41D5256DC00DD9DD9 /* Categories */,
 				7F1BC4A11D52519F00DD9DD9 /* Themes */,
@@ -421,6 +434,15 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		7F45FCCE1D54AAB300CE3E1D /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				7F45FCD31D54AAF100CE3E1D /* Localizable.strings */,
+				7F45FCD61D54AD8700CE3E1D /* LocalizationExtensions.swift */,
+			);
+			name = Localization;
 			sourceTree = "<group>";
 		};
 		7FCE923F1D53467100287E44 /* Common */ = {
@@ -493,6 +515,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 3949C1B61D4C023600ECA06E;
 			productRefGroup = 3949C1C01D4C023600ECA06E /* Products */;
@@ -511,7 +534,9 @@
 			files = (
 				3949C1CF1D4C023600ECA06E /* LaunchScreen.storyboard in Resources */,
 				7F33B9C01D50F87B009B60FA /* circular_bold.otf in Resources */,
+				7F45FCD11D54AAF100CE3E1D /* Localizable.strings in Resources */,
 				393155A91D50128F0010A01E /* SemesterTableViewCell.xib in Resources */,
+				7F45FCDB1D54B9BF00CE3E1D /* OptionTableViewCell.xib in Resources */,
 				7F33B9C11D50F87B009B60FA /* circular_book.otf in Resources */,
 				393880861D54CCEB00759435 /* ProfileHeaderTableViewCell.xib in Resources */,
 				7FCE923E1D5345BC00287E44 /* SemesterDialogView.xib in Resources */,
@@ -590,6 +615,7 @@
 				3949C1C31D4C023600ECA06E /* AppDelegate.swift in Sources */,
 				7F33B9C61D50FD47009B60FA /* ViewFontExtensions.swift in Sources */,
 				7F33B9C41D50F91A009B60FA /* FontHelper.swift in Sources */,
+				7F45FCDA1D54B9BF00CE3E1D /* OptionTableViewCell.swift in Sources */,
 				392ED1491D4FFDA600E65629 /* Course.swift in Sources */,
 				393880851D54CCEB00759435 /* ProfileHeaderTableViewCell.swift in Sources */,
 				393155A41D5010630010A01E /* SemestersViewController.swift in Sources */,
@@ -601,6 +627,7 @@
 				392AF9221D4FEED300A91F92 /* Semester.swift in Sources */,
 				7F1BC4A61D52574A00DD9DD9 /* HexaColorExtension.swift in Sources */,
 				7F1BC49D1D52465800DD9DD9 /* QuickPickerViewController.swift in Sources */,
+				7F45FCD71D54AD8700CE3E1D /* LocalizationExtensions.swift in Sources */,
 				7F1BC4A01D524FE600DD9DD9 /* TintedImage.swift in Sources */,
 				7F33B9C91D51073B009B60FA /* RootTabBarController.swift in Sources */,
 				7FCE92421D5346A800287E44 /* BlurredView.swift in Sources */,
@@ -624,6 +651,17 @@
 				3949C1CE1D4C023600ECA06E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7F45FCD31D54AAF100CE3E1D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F45FCD21D54AAF100CE3E1D /* Base */,
+				7F45FCD41D54AAF300CE3E1D /* en */,
+				7F45FCD51D54AB2100CE3E1D /* es */,
+			);
+			name = Localizable.strings;
+			path = Configuration/Localization;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

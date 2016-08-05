@@ -10,7 +10,7 @@ import UIKit
 
 class RootTabBarController: UITabBarController {
     
-    let mTabs = [ Tabs.Semesters, Tabs.Quick, Tabs.Profile]
+    let mTabs = [ Tabs.Semesters, Tabs.Profile]
     
     override func viewDidLoad() {
         setTabs()
@@ -21,6 +21,7 @@ class RootTabBarController: UITabBarController {
         setTabsWithSelectedIndex(0)
         
     }
+    
     
     func setTabsWithSelectedIndex(index : Int) {
         //Set tabs appeareance

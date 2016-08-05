@@ -34,7 +34,6 @@ class UserDefaultsController: NSObject {
         return getDefaults().integerForKey(key)
     }
     
-    
     static func save(value: String, key: String){
         getDefaults().setObject(value, forKey: key)
     }

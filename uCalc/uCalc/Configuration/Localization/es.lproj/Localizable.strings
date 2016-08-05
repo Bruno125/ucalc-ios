@@ -1,0 +1,40 @@
+
+/*==========================================
+ TAB BAR TITLE
+ ==========================================*/
+
+"Semesters" ="Ciclos";
+"Quick calculus" = "Cálculo Rápido";
+"Profile" = "Perfil";
+
+/*==========================================
+ SEMESTERS VIEW CONTROLLER
+ ==========================================*/
+
+"You haven't added any semesters yet! Add one using the button below or the one on the top right corner" = "Aún no tienes ningún ciclo. Agrega uno nuevo usando el botón de abajo o el '+' de arriba";
+"Add semester" = "Nuevo ciclo";
+
+"semester name" = "nombre del ciclo";
+"i.e: 2016-01" = "ej: 2016-01";
+"Approximate semester final grade?" = "¿Aproximar el promedio final del ciclo?";
+"Approximate course final grade?" = "¿Aproximar el promedio final de los cursos?";
+"Save semester" = "Guardar ciclo";
+"Cancel and discard changes" = "Cerrar y descartar cambios";
+
+
+/*==========================================
+ PROFILE VIEW CONTROLLER
+ ==========================================*/
+
+"Edit information" = "Editar información";
+
+"option_color_title" = "Cambiar el color de la aplicación";
+"option_color_desc" = "¡Dale un nuevo estilo a la aplicación!";
+"option_feedback_title" = "Enviar feedback";
+"option_feedback_desc" = "Manda un correo reportando errores, ofreciendo ayuda, dando sugerencias, agradecimientos, críticas constructivas o destructivas. ¡Todo es bienvenido!";
+"option_licenses_title" = "Licencias";
+"option_licenses_desc" = "Ya hubieras desinstalado la aplicación si no fuera por estas geniales librerías. Open Source FTW!";
+"option_version_title" = "App Version";
+
+
+

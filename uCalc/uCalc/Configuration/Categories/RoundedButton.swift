@@ -21,6 +21,7 @@ class RoundedButton : UIButton {
         layer.cornerRadius = layer.frame.size.height / 2
         style = "regular"
         backgroundColor = ThemeHelper.defaultColor().mainColor
+        
     }
     
 }

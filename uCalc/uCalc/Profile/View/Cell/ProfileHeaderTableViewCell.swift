@@ -10,8 +10,8 @@ import UIKit
 
 class ProfileHeaderTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var nameInititalsLabel: UILabel!
     @IBOutlet weak var backgroundImageview: UIImageView!
+    @IBOutlet weak var nameInititalsButton: RoundedButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var careerLabel: UILabel!
     
@@ -27,7 +27,8 @@ class ProfileHeaderTableViewCell: UITableViewCell {
         let color = ThemeHelper.defaultColor()
         
         backgroundImageview.image = color.backgroundImage
-        nameInititalsLabel.backgroundColor = color.mainDarkColor
+        nameInititalsButton.backgroundColor = color.accentColor
+        nameInititalsButton.setImage(UIImage.tintedImage("ic_student"), forState: UIControlState.Normal)
         
     }
 

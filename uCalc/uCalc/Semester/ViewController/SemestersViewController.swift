@@ -43,6 +43,10 @@ class SemestersViewController: UcalcViewController,UITableViewDelegate,UITableVi
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_add_white"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(showAddDialog))
     }
     
+    @IBAction func addSemesterTouchUp(sender: AnyObject) {
+        showAddDialog()
+    }
+    
     func showAddDialog(){
         SemesterDialogView.present(self)
     }
