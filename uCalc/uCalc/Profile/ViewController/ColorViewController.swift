@@ -8,40 +8,26 @@
 
 import UIKit
 
-class ColorViewController: UcalcViewController,UIPickerViewDataSource,UIPickerViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate {
-    
-    @IBOutlet weak var colorPicker: UIPickerView!
+class ColorViewController: UcalcViewController,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate {
+
+    @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var colors = ThemeColors.asList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        colorPicker.reloadAllComponents()
-        
         collectionView.registerNib(UINib(nibName: ColorCollectionViewCell.identifier(), bundle: nil), forCellWithReuseIdentifier: ColorCollectionViewCell.identifier())
         
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        
-        collectionView.reloadData()
-        setup()
-    }
-    
-    private func setup(){
+        //Setup views
+        collectionView.hidden = true
         let current = ThemeHelper.defaultColor()
-        var index = 0
-        for i in 0...colors.count{
-            if current.label == colors[i].label{
-                index = i
-                break;
-            }
-        }
-        
-        self.view.backgroundColor = colors[0].mainColor
-        //collectionView.scrollToItemAtIndexPath(NSIndexPath(forRow: index, inSection: 0), atScrollPosition: UICollectionViewScrollPosition.CenteredVertically, animated: false)
-        colorPicker.selectRow(index, inComponent: 0, animated: false)
+        self.view.backgroundColor = current.mainColor
+        navigationBar.barTintColor = current.mainColor
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
     
     // MARK: - CollectionView DataSource
@@ -69,13 +55,12 @@ class ColorViewController: UcalcViewController,UIPickerViewDataSource,UIPickerVi
         return collectionView.frame.size
     }
     
-    
-    
     var currentOffSet : CGFloat = -1
     var currentColor : UIColor?
+    /// Change background and navbar colors on collectionview scroll
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let singleWidth = collectionView.contentSize.width / CGFloat(colors.count)
-        let position = Int(collectionView.contentOffset.x) / Int(singleWidth)
+        let position = getColorPosition()
         var color1, color2 : UIColor?
         var ratio : Float
         
@@ -95,34 +80,47 @@ class ColorViewController: UcalcViewController,UIPickerViewDataSource,UIPickerVi
         }
         
         let newColor = UiUtils.blendColors(color1!, secondColor: color2!, ratio: ratio)
-        
+        navigationBar.barTintColor = newColor
         self.view.backgroundColor = newColor
         
         currentOffSet = collectionView.contentOffset.x
+    }
+    
+    func getColorPosition() -> Int {
+        let singleWidth = collectionView.contentSize.width / CGFloat(colors.count)
+        return Int(collectionView.contentOffset.x) / Int(singleWidth)
+    }
+    
+    
+    override func viewDidAppear(animated: Bool) {
         
-        
+        collectionView.reloadData()
+        scrollToSelected()
     }
     
-    
-    // MARK: - Picker Delegate & DataSource
-    
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
+    private func scrollToSelected(){
+        let current = ThemeHelper.defaultColor()
+        var index = 0
+        for i in 0...colors.count{
+            if current.label == colors[i].label{
+                index = i
+                break;
+            }
+        }
+        collectionView.scrollToItemAtIndexPath(NSIndexPath(forRow: index, inSection: 0), atScrollPosition: UICollectionViewScrollPosition.CenteredHorizontally, animated: false)
+        collectionView.hidden = false
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return colors.count
-    }
+    // MARK: - NavigationBar Actions
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return colors[row].label
-    }
-    
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        ThemeHelper.saveColor(colors[row])
+    @IBAction func saveClicked(sender: AnyObject) {
+        ThemeHelper.saveColor(colors[getColorPosition()])
+        dismissViewControllerAnimated(true, completion: nil)
         AppDelegate.resetTabs()
-        
+    }
+    
+    @IBAction func closeClicked(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
 

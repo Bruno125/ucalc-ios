@@ -104,7 +104,7 @@ class ProfileViewController: UcalcViewController, UITableViewDelegate, UITableVi
         if let selector = (mOptions[indexPath.row-1] ).selector {
             performSelector(selector)
         }
-        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
     }
     

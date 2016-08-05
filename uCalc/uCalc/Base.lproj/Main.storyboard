@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -128,15 +128,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLK-IV-9v1">
-                                <rect key="frame" x="0.0" y="192" width="600" height="216"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="v4P-eh-gga" id="zKO-uv-C8w"/>
-                                    <outlet property="delegate" destination="v4P-eh-gga" id="NI7-QO-Cb1"/>
-                                </connections>
-                            </pickerView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fqb-Om-sid">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xYT-FJ-ovf">
                                     <size key="itemSize" width="50" height="50"/>
@@ -160,21 +153,46 @@
                                     <outlet property="delegate" destination="v4P-eh-gga" id="EuL-xC-LFH"/>
                                 </connections>
                             </collectionView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j4u-ei-Iwu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="J8u-Ss-OIG"/>
+                                </constraints>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Pick a color" id="03o-1B-nlX">
+                                        <barButtonItem key="leftBarButtonItem" title="Close" style="plain" id="WX6-lY-U9s">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="closeClicked:" destination="v4P-eh-gga" id="EgW-wQ-FTw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" style="done" id="r0d-Ve-PAx">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="saveClicked:" destination="v4P-eh-gga" id="pnN-8k-hct"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="j4u-ei-Iwu" firstAttribute="leading" secondItem="Tx9-ih-QTQ" secondAttribute="leading" id="34D-XK-NU7"/>
                             <constraint firstItem="ly5-dA-3P5" firstAttribute="top" secondItem="fqb-Om-sid" secondAttribute="bottom" id="Fap-MA-nAU"/>
+                            <constraint firstAttribute="trailing" secondItem="j4u-ei-Iwu" secondAttribute="trailing" id="JZx-kA-mBn"/>
                             <constraint firstItem="fqb-Om-sid" firstAttribute="top" secondItem="e1e-L8-PZU" secondAttribute="bottom" id="OX2-ub-aP1"/>
-                            <constraint firstItem="aLK-IV-9v1" firstAttribute="centerY" secondItem="Tx9-ih-QTQ" secondAttribute="centerY" id="XrT-qn-4uq"/>
-                            <constraint firstItem="aLK-IV-9v1" firstAttribute="leading" secondItem="Tx9-ih-QTQ" secondAttribute="leading" id="d2W-zn-72q"/>
-                            <constraint firstAttribute="trailing" secondItem="aLK-IV-9v1" secondAttribute="trailing" id="rAF-eH-h38"/>
+                            <constraint firstItem="j4u-ei-Iwu" firstAttribute="top" secondItem="Tx9-ih-QTQ" secondAttribute="top" id="VjA-UU-4hM"/>
                             <constraint firstItem="fqb-Om-sid" firstAttribute="leading" secondItem="Tx9-ih-QTQ" secondAttribute="leading" id="s6F-Xv-zc0"/>
                             <constraint firstAttribute="trailing" secondItem="fqb-Om-sid" secondAttribute="trailing" id="sgH-iA-UbX"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="fqb-Om-sid" id="gjo-mE-cXF"/>
-                        <outlet property="colorPicker" destination="aLK-IV-9v1" id="vSy-hy-gs6"/>
+                        <outlet property="navigationBar" destination="j4u-ei-Iwu" id="dOG-Fe-Evz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFo-2W-03a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -240,7 +258,7 @@
                     <connections>
                         <outlet property="tableView" destination="Gyh-g3-Hmc" id="oLW-r2-wNk"/>
                         <segue destination="Afz-or-U8U" kind="show" identifier="EditProfileSegue" id="HGy-rR-UC2"/>
-                        <segue destination="v4P-eh-gga" kind="show" identifier="PickColorSegue" id="LD2-tV-H5O"/>
+                        <segue destination="v4P-eh-gga" kind="presentation" identifier="PickColorSegue" id="LD2-tV-H5O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eka-li-o9s" userLabel="First Responder" sceneMemberID="firstResponder"/>

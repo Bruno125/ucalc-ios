@@ -1,7 +1,40 @@
-/* 
-  Localizable.strings
-  uCalc
 
-  Created by Alumnos on 8/5/16.
-  Copyright © 2016 Bruno Aybar. All rights reserved.
-*/
+/*==========================================
+ TAB BAR TITLE
+ ==========================================*/
+
+"Semesters" ="Semesters";
+"Quick calculus" = "Quick calculus";
+"Profile" = "Profile";
+
+/*==========================================
+ SEMESTERS VIEW CONTROLLER
+ ==========================================*/
+
+"You haven't added any semesters yet! Add one using the button below or the one on the top right corner" = "You haven't added any semesters yet! Add one using the button below or the one on the top right corner";
+"Add semester" = "Add semester";
+
+"semester name" = "semester name";
+"i.e: 2016-01" = "i.e: 2016-01";
+"Approximate semester final grade?" = "Approximate semester final grade?";
+"Approximate course final grade?" = "Approximate course final grade?";
+"Save semester" = "Save semester";
+"Cancel and discard changes" = "Cancel and discard changes";
+
+
+/*==========================================
+ PROFILE VIEW CONTROLLER
+ ==========================================*/
+
+"Edit information" = "Edit information";
+
+"option_color_title" = "Change application color";
+"option_color_desc" = "Give a new style to the application";
+"option_feedback_title" = "Send feedback";
+"option_feedback_desc" = "Send an email reporting errors, offering help, giving suggestions, cheers, and contructive / destructive reviews. Everything is appreciated!";
+"option_licenses_title" = "Licenses";
+"option_licenses_desc" = "You would've already uninstalled the app if it weren't because of this awesome libraries. Open Source FTW!";
+"option_version_title" = "App Version";
+
+"Pick a color" = "Pick a color";
+
