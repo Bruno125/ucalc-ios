@@ -13,6 +13,21 @@ class ProfileViewController: UcalcViewController, UITableViewDelegate, UITableVi
     class Option {
         var title : String?
         var description : String?
+        var selector : Selector?
+        var showDisclosure : Bool = true
+        
+        init(title: String, desc: String, selector : Selector, showDisclosure : Bool){
+            self.title = NSLocalizedString(title, comment: "")
+            self.description = NSLocalizedString(desc, comment: "")
+            self.selector = selector
+            self.showDisclosure = showDisclosure
+        }
+        
+        init(title: String, desc: String, selector : Selector){
+            self.title = NSLocalizedString(title, comment: "")
+            self.description = NSLocalizedString(desc, comment: "")
+            self.selector = selector
+        }
         
         init(title: String, desc: String){
             self.title = NSLocalizedString(title, comment: "")
@@ -23,10 +38,10 @@ class ProfileViewController: UcalcViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var tableView: UITableView!
     let mOptions = [
-        Option(title: "option_color_title", desc: "option_color_desc"),
-        Option(title: "option_feedback_title", desc: "option_feedback_desc"),
-        Option(title: "option_licenses_title", desc: "option_licenses_desc"),
-        Option(title: "option_version_title", desc: NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String )
+        Option(title: "option_color_title", desc: "option_color_desc", selector: #selector(openChangeColor)),
+        Option(title: "option_feedback_title", desc: "option_feedback_desc", selector: #selector(openFeedback)),
+        Option(title: "option_licenses_title", desc: "option_licenses_desc", selector: #selector(openLicenses)),
+        Option(title: "option_version_title", desc: "v\(NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String)", selector: nil, showDisclosure: false)
     ]
     
     
@@ -50,11 +65,16 @@ class ProfileViewController: UcalcViewController, UITableViewDelegate, UITableVi
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         if indexPath.row == 0{
-            return tableView.dequeueReusableCellWithIdentifier(ProfileHeaderTableViewCell.identifier())!
+            let cell =  tableView.dequeueReusableCellWithIdentifier(ProfileHeaderTableViewCell.identifier()) as! ProfileHeaderTableViewCell
+            cell.setEditSelector(self, selector: #selector(openEditInfo))
+            return cell
         }else{
             let cell = tableView.dequeueReusableCellWithIdentifier(OptionTableViewCell.identifier()) as! OptionTableViewCell
             let option = mOptions[indexPath.row-1]
             cell.set(option.title!, description: option.description!)
+            if option.showDisclosure{
+                cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+            }
             return cell
         }
     }
@@ -67,6 +87,41 @@ class ProfileViewController: UcalcViewController, UITableViewDelegate, UITableVi
         return UITableViewAutomaticDimension
     }
     
+    func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        if indexPath.row == 0{
+            return false
+        }
+        return (mOptions[indexPath.row-1]).showDisclosure
+    }
+    
+    // MARK: - Table Interactions
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row == 0 {
+            return
+        }
+        
+        if let selector = (mOptions[indexPath.row-1] ).selector {
+            performSelector(selector)
+        }
+        
+        
+    }
+    
+    func openEditInfo() {
+        performSegueWithIdentifier("EditProfileSegue", sender: self)
+    }
+    
+    func openChangeColor(){
+        performSegueWithIdentifier("PickColorSegue", sender: self)
+    }
+    func openFeedback(){
+        
+    }
+    func openLicenses(){
+        
+    }
+    
     
     // MARK: - Show / hide navigation bar
     
@@ -74,7 +129,6 @@ class ProfileViewController: UcalcViewController, UITableViewDelegate, UITableVi
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.setNeedsStatusBarAppearanceUpdate()
-        
     }
     
     override func viewWillDisappear(animated: Bool) {

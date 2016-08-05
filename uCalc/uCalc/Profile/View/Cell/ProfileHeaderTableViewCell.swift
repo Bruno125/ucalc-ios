@@ -14,7 +14,9 @@ class ProfileHeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var nameInititalsButton: RoundedButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var careerLabel: UILabel!
+    @IBOutlet weak var editButton: RoundedButton!
     
+    var editSelector : Selector?
     
     static func identifier() -> String{
         return "ProfileHeaderTableViewCell"
@@ -31,7 +33,12 @@ class ProfileHeaderTableViewCell: UITableViewCell {
         nameInititalsButton.setImage(UIImage.tintedImage("ic_student"), forState: UIControlState.Normal)
         
     }
-
+    
+    func setEditSelector(target : AnyObject?, selector : Selector) {
+        editButton.addTarget(target, action: selector, forControlEvents: UIControlEvents.TouchUpInside)
+    }
+    
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

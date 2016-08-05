@@ -79,8 +79,8 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sad-LR-5Q6" customClass="RoundedButton" customModule="uCalc" customModuleProvider="target">
-                                <rect key="frame" x="62" y="155" width="160" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sad-LR-5Q6" customClass="RoundedButton" customModule="uCalc" customModuleProvider="target">
+                                <rect key="frame" x="63" y="154" width="160" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="ijx-fJ-Yk0"/>
@@ -162,6 +162,7 @@
             <connections>
                 <outlet property="backgroundImageview" destination="GVF-rn-fNI" id="oeT-Kt-g88"/>
                 <outlet property="careerLabel" destination="ybQ-0r-qsv" id="pCX-Aj-M2o"/>
+                <outlet property="editButton" destination="Sad-LR-5Q6" id="vKP-Rz-agZ"/>
                 <outlet property="nameInititalsButton" destination="AYQ-R6-gNP" id="CGW-Qh-S3q"/>
                 <outlet property="nameLabel" destination="v6e-xY-BHV" id="PnB-0w-pTJ"/>
             </connections>
