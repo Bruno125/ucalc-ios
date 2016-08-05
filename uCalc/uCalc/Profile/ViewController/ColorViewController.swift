@@ -8,21 +8,28 @@
 
 import UIKit
 
-class ColorViewController: UcalcViewController,UIPickerViewDataSource,UIPickerViewDelegate {
+class ColorViewController: UcalcViewController,UIPickerViewDataSource,UIPickerViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate {
     
     @IBOutlet weak var colorPicker: UIPickerView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var colors = ThemeColors.asList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         colorPicker.reloadAllComponents()
-        setupPicker()
         
+        collectionView.registerNib(UINib(nibName: ColorCollectionViewCell.identifier(), bundle: nil), forCellWithReuseIdentifier: ColorCollectionViewCell.identifier())
         
     }
     
-    private func setupPicker(){
+    override func viewWillAppear(animated: Bool) {
+        
+        collectionView.reloadData()
+        setup()
+    }
+    
+    private func setup(){
         let current = ThemeHelper.defaultColor()
         var index = 0
         for i in 0...colors.count{
@@ -31,7 +38,69 @@ class ColorViewController: UcalcViewController,UIPickerViewDataSource,UIPickerVi
                 break;
             }
         }
+        
+        self.view.backgroundColor = colors[0].mainColor
+        //collectionView.scrollToItemAtIndexPath(NSIndexPath(forRow: index, inSection: 0), atScrollPosition: UICollectionViewScrollPosition.CenteredVertically, animated: false)
         colorPicker.selectRow(index, inComponent: 0, animated: false)
+    }
+    
+    // MARK: - CollectionView DataSource
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return colors.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(ColorCollectionViewCell.identifier(), forIndexPath: indexPath) as! ColorCollectionViewCell
+        
+        let color = colors[indexPath.row]
+        cell.screenImageView.image = color.backgroundImage
+        
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                               sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return collectionView.frame.size
+    }
+    
+    
+    
+    var currentOffSet : CGFloat = -1
+    var currentColor : UIColor?
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let singleWidth = collectionView.contentSize.width / CGFloat(colors.count)
+        let position = Int(collectionView.contentOffset.x) / Int(singleWidth)
+        var color1, color2 : UIColor?
+        var ratio : Float
+        
+        if currentOffSet == -1 || collectionView.contentOffset.x >= collectionView.contentSize.width - singleWidth { // do nothing
+            currentOffSet = 0
+            return
+        } else if collectionView.contentOffset.x < currentOffSet {
+            // Is going back
+            color2 = colors[position].mainColor
+            color1 = colors[position+1].mainColor
+            ratio = ((Float(collectionView.contentOffset.x) - Float(singleWidth) * (Float(position) - 1)) / Float(singleWidth)) - 1
+        }else {
+            // Is going forward
+            color1 = colors[position].mainColor
+            color2 = colors[position+1].mainColor
+            ratio = Float(Float(singleWidth) * (Float(position) + 1) - Float(collectionView.contentOffset.x)) / Float(singleWidth)
+        }
+        
+        let newColor = UiUtils.blendColors(color1!, secondColor: color2!, ratio: ratio)
+        
+        self.view.backgroundColor = newColor
+        
+        currentOffSet = collectionView.contentOffset.x
+        
+        
     }
     
     

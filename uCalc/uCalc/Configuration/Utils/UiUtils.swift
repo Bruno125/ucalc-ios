@@ -30,4 +30,20 @@ class UiUtils: NSObject {
         textField.layer.masksToBounds = true
     }
     
+    static func blendColors( firstColor : UIColor, secondColor : UIColor, ratio : Float) -> UIColor{
+        
+        let rgb1 = firstColor.rgb()!
+        let rgb2 = secondColor.rgb()!
+        
+        let newRatio = min(1, ratio)
+        let inverseRatio = 1 - newRatio
+        
+        let r = CGFloat(rgb1.red) * CGFloat(newRatio) + CGFloat(rgb2.red) * CGFloat(inverseRatio)
+        let g = CGFloat(rgb1.green) * CGFloat(newRatio) + CGFloat(rgb2.green) * CGFloat(inverseRatio)
+        let b = CGFloat(rgb1.blue) * CGFloat(newRatio) + CGFloat(rgb2.blue) * CGFloat(inverseRatio)
+        
+    
+        return UIColor(red: Int(r), green: Int(g), blue: Int(b))
+    }
+    
 }

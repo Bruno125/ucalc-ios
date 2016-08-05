@@ -44,6 +44,8 @@
 		7F45FCD71D54AD8700CE3E1D /* LocalizationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45FCD61D54AD8700CE3E1D /* LocalizationExtensions.swift */; };
 		7F45FCDA1D54B9BF00CE3E1D /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45FCD81D54B9BF00CE3E1D /* OptionTableViewCell.swift */; };
 		7F45FCDB1D54B9BF00CE3E1D /* OptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F45FCD91D54B9BF00CE3E1D /* OptionTableViewCell.xib */; };
+		7F45FCE61D54DB8F00CE3E1D /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45FCE41D54DB8F00CE3E1D /* ColorCollectionViewCell.swift */; };
+		7F45FCE71D54DB8F00CE3E1D /* ColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F45FCE51D54DB8F00CE3E1D /* ColorCollectionViewCell.xib */; };
 		7FB451031D53A01400567BC6 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB451021D53A01400567BC6 /* RoundedButton.swift */; };
 		7FCE923C1D5345AE00287E44 /* SemesterDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCE923B1D5345AE00287E44 /* SemesterDialogView.swift */; };
 		7FCE923E1D5345BC00287E44 /* SemesterDialogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FCE923D1D5345BC00287E44 /* SemesterDialogView.xib */; };
@@ -93,6 +95,8 @@
 		7F45FCD61D54AD8700CE3E1D /* LocalizationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizationExtensions.swift; path = Configuration/Localization/LocalizationExtensions.swift; sourceTree = "<group>"; };
 		7F45FCD81D54B9BF00CE3E1D /* OptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionTableViewCell.swift; path = Profile/View/Cell/OptionTableViewCell.swift; sourceTree = "<group>"; };
 		7F45FCD91D54B9BF00CE3E1D /* OptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OptionTableViewCell.xib; path = Profile/View/Cell/OptionTableViewCell.xib; sourceTree = "<group>"; };
+		7F45FCE41D54DB8F00CE3E1D /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorCollectionViewCell.swift; path = Profile/View/Cell/ColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		7F45FCE51D54DB8F00CE3E1D /* ColorCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ColorCollectionViewCell.xib; path = Profile/View/Cell/ColorCollectionViewCell.xib; sourceTree = "<group>"; };
 		7FB451021D53A01400567BC6 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedButton.swift; path = Configuration/Categories/RoundedButton.swift; sourceTree = "<group>"; };
 		7FCE923B1D5345AE00287E44 /* SemesterDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemesterDialogView.swift; path = Semester/View/SemesterDialogView.swift; sourceTree = "<group>"; };
 		7FCE923D1D5345BC00287E44 /* SemesterDialogView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SemesterDialogView.xib; path = Semester/View/SemesterDialogView.xib; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 				393880841D54CCEB00759435 /* ProfileHeaderTableViewCell.xib */,
 				7F45FCD81D54B9BF00CE3E1D /* OptionTableViewCell.swift */,
 				7F45FCD91D54B9BF00CE3E1D /* OptionTableViewCell.xib */,
+				7F45FCE41D54DB8F00CE3E1D /* ColorCollectionViewCell.swift */,
+				7F45FCE51D54DB8F00CE3E1D /* ColorCollectionViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -541,6 +547,7 @@
 				393880861D54CCEB00759435 /* ProfileHeaderTableViewCell.xib in Resources */,
 				7FCE923E1D5345BC00287E44 /* SemesterDialogView.xib in Resources */,
 				3949C1CC1D4C023600ECA06E /* Assets.xcassets in Resources */,
+				7F45FCE71D54DB8F00CE3E1D /* ColorCollectionViewCell.xib in Resources */,
 				7F33B9C21D50F87B009B60FA /* circular_light.otf in Resources */,
 				3949C1CA1D4C023600ECA06E /* Main.storyboard in Resources */,
 				7F33B9BF1D50F87B009B60FA /* airglyphs.ttf in Resources */,
@@ -602,6 +609,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F45FCE61D54DB8F00CE3E1D /* ColorCollectionViewCell.swift in Sources */,
 				7FCE923C1D5345AE00287E44 /* SemesterDialogView.swift in Sources */,
 				7F1BC4AC1D528BCA00DD9DD9 /* UcalcViewController.swift in Sources */,
 				3949C1C71D4C023600ECA06E /* SecondViewController.swift in Sources */,

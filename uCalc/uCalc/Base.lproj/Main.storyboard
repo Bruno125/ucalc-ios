@@ -116,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="1539" y="900"/>
         </scene>
-        <!--Profile-->
+        <!--Change app color-->
         <scene sceneID="Mwj-cj-j8N">
             <objects>
-                <viewController storyboardIdentifier="ColorViewController" title="Profile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="v4P-eh-gga" customClass="ColorViewController" customModule="uCalc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ColorViewController" title="Change app color" useStoryboardIdentifierAsRestorationIdentifier="YES" id="v4P-eh-gga" customClass="ColorViewController" customModule="uCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e1e-L8-PZU"/>
                         <viewControllerLayoutGuide type="bottom" id="ly5-dA-3P5"/>
@@ -128,22 +128,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLK-IV-9v1">
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLK-IV-9v1">
                                 <rect key="frame" x="0.0" y="192" width="600" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="v4P-eh-gga" id="zKO-uv-C8w"/>
                                     <outlet property="delegate" destination="v4P-eh-gga" id="NI7-QO-Cb1"/>
                                 </connections>
                             </pickerView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fqb-Om-sid">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xYT-FJ-ovf">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ehb-NE-9NE">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="v4P-eh-gga" id="0nG-qG-tVv"/>
+                                    <outlet property="delegate" destination="v4P-eh-gga" id="EuL-xC-LFH"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ly5-dA-3P5" firstAttribute="top" secondItem="fqb-Om-sid" secondAttribute="bottom" id="Fap-MA-nAU"/>
+                            <constraint firstItem="fqb-Om-sid" firstAttribute="top" secondItem="e1e-L8-PZU" secondAttribute="bottom" id="OX2-ub-aP1"/>
                             <constraint firstItem="aLK-IV-9v1" firstAttribute="centerY" secondItem="Tx9-ih-QTQ" secondAttribute="centerY" id="XrT-qn-4uq"/>
                             <constraint firstItem="aLK-IV-9v1" firstAttribute="leading" secondItem="Tx9-ih-QTQ" secondAttribute="leading" id="d2W-zn-72q"/>
                             <constraint firstAttribute="trailing" secondItem="aLK-IV-9v1" secondAttribute="trailing" id="rAF-eH-h38"/>
+                            <constraint firstItem="fqb-Om-sid" firstAttribute="leading" secondItem="Tx9-ih-QTQ" secondAttribute="leading" id="s6F-Xv-zc0"/>
+                            <constraint firstAttribute="trailing" secondItem="fqb-Om-sid" secondAttribute="trailing" id="sgH-iA-UbX"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="fqb-Om-sid" id="gjo-mE-cXF"/>
                         <outlet property="colorPicker" destination="aLK-IV-9v1" id="vSy-hy-gs6"/>
                     </connections>
                 </viewController>
