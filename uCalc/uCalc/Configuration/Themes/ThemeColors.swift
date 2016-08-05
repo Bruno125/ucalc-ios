@@ -13,6 +13,7 @@ protocol BaseColor {
     var mainDarkColor : UIColor {get}
     var accentColor : UIColor {get}
     var label : String {get}
+    var backgroundImage : UIImage {get}
 }
 
 class ThemeColors {
@@ -44,6 +45,7 @@ class ThemeColors {
         let mainDarkColor: UIColor = UIColor(netHex: 0xD32F2F)
         let accentColor: UIColor = UIColor(netHex: 0xFF4081)
         let label: String = "Red"
+        var backgroundImage: UIImage = UIImage(named: "back_header_red")!
     }
     
     
@@ -52,6 +54,7 @@ class ThemeColors {
         let mainDarkColor: UIColor = UIColor(netHex: 0x1976D2)
         let accentColor: UIColor = UIColor(netHex: 0x8BC34A)
         let label: String = "Blue"
+        var backgroundImage: UIImage = UIImage(named: "back_header_blue")!
     }
     
     class Green : BaseColor {
@@ -59,6 +62,7 @@ class ThemeColors {
         let mainDarkColor: UIColor = UIColor(netHex: 0x33691e)
         let accentColor: UIColor = UIColor(netHex: 0x8BC34A)
         let label: String = "Green"
+        var backgroundImage: UIImage = UIImage(named: "back_header_green")!
     }
     
     class Pink : BaseColor {
@@ -66,6 +70,7 @@ class ThemeColors {
         let mainDarkColor: UIColor = UIColor(netHex: 0xFE0055)
         let accentColor: UIColor = UIColor(netHex: 0xFF1262)
         let label: String = "Pink"
+        var backgroundImage: UIImage = UIImage(named: "back_header_pink")!
     }
     
     class Yellow : BaseColor {
@@ -73,6 +78,7 @@ class ThemeColors {
         let mainDarkColor: UIColor = UIColor(netHex: 0xFFA000)
         let accentColor: UIColor = UIColor(netHex: 0xFFA00)
         let label: String = "Yellow"
+        var backgroundImage: UIImage = UIImage(named: "back_header_yellow")!
     }
     
     class Orange : BaseColor {
@@ -80,6 +86,7 @@ class ThemeColors {
         let mainDarkColor: UIColor = UIColor(netHex: 0xE64A19)
         let accentColor: UIColor = UIColor(netHex: 0xFF5722)
         let label: String = "Orange"
+        var backgroundImage: UIImage = UIImage(named: "back_header_yellow")!
     }
     
     
@@ -88,6 +95,7 @@ class ThemeColors {
         let mainDarkColor: UIColor = UIColor(netHex: 0x512DA8)
         let accentColor: UIColor = UIColor(netHex: 0xE040FB)
         let label: String = "Purple"
+        var backgroundImage: UIImage = UIImage(named: "back_header_purple")!
     }
     
     
@@ -96,5 +104,6 @@ class ThemeColors {
         let mainDarkColor: UIColor = UIColor(netHex: 0x455A64)
         let accentColor: UIColor = UIColor(netHex: 0xE040FB)
         let label: String = "Gray"
+        var backgroundImage: UIImage = UIImage(named: "back_header_grey")!
     }
 }

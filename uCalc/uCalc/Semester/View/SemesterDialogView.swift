@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddSemesterView: UIView,UITextFieldDelegate {
+class SemesterDialogView: UIView,UITextFieldDelegate {
 
     
     
@@ -23,9 +23,9 @@ class AddSemesterView: UIView,UITextFieldDelegate {
     
     var parentController : UIViewController?
     
-    static func present(controller: UIViewController) -> AddSemesterView{
-        let arr = NSBundle.mainBundle().loadNibNamed("AddSemesterView", owner: controller, options: nil)
-        let view = arr[0] as! AddSemesterView
+    static func present(controller: UIViewController) -> SemesterDialogView{
+        let arr = NSBundle.mainBundle().loadNibNamed("SemesterDialogView", owner: controller, options: nil)
+        let view = arr[0] as! SemesterDialogView
         view.setup()
         view.parentController = controller
         
@@ -57,7 +57,7 @@ class AddSemesterView: UIView,UITextFieldDelegate {
         UiUtils.applyBottomBorder(semesterTextField, borderWidth: 1)
         
         //Set touch action to view
-        let tap = UITapGestureRecognizer(target: self, action: #selector(AddSemesterView.handleTap(_:)))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(SemesterDialogView.handleTap(_:)))
         
         visualEffectView.addGestureRecognizer(tap)
         

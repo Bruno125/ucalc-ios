@@ -44,7 +44,7 @@ class SemestersViewController: UcalcViewController,UITableViewDelegate,UITableVi
     }
     
     func showAddDialog(){
-        AddSemesterView.present(self)
+        SemesterDialogView.present(self)
     }
     
     

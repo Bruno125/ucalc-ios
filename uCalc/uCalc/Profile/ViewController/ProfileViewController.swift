@@ -2,61 +2,48 @@
 //  ProfileViewController.swift
 //  uCalc
 //
-//  Created by Alumnos on 8/3/16.
+//  Created by Bruno Aybar on 8/5/16.
 //  Copyright © 2016 Bruno Aybar. All rights reserved.
 //
 
 import UIKit
 
-class ProfileViewController: UcalcViewController,UIPickerViewDataSource,UIPickerViewDelegate {
+class ProfileViewController: UcalcViewController, UITableViewDelegate, UITableViewDataSource {
+
     
-    @IBOutlet weak var colorPicker: UIPickerView!
+    @IBOutlet weak var tableView: UITableView!
     
-    var colors = ThemeColors.asList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        colorPicker.reloadAllComponents()
-        setupPicker()
-        
-        
+
+        tableView.registerNib(UINib(nibName: ProfileHeaderTableViewCell.identifier(),bundle: nil), forCellReuseIdentifier: ProfileHeaderTableViewCell.identifier())
     }
-    
-    private func setupPicker(){
-        let current = ThemeHelper.defaultColor()
-        var index = 0
-        for i in 0...colors.count{
-            if current.label == colors[i].label{
-                index = i
-                break;
-            }
-        }
-        colorPicker.selectRow(index, inComponent: 0, animated: false)
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
+
+    // MARK: - TableView DataSource
     
-    
-    // MARK: - Picker Delegate & DataSource
-    
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return colors.count
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return tableView.dequeueReusableCellWithIdentifier(ProfileHeaderTableViewCell.identifier())!
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return colors[row].label
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        ThemeHelper.saveColor(colors[row])
-        AppDelegate.resetTabs()
-        
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
-
+    
     /*
     // MARK: - Navigation
 

@@ -13,6 +13,11 @@
 		393155A41D5010630010A01E /* SemestersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393155A31D5010630010A01E /* SemestersViewController.swift */; };
 		393155A81D50128F0010A01E /* SemesterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393155A61D50128F0010A01E /* SemesterTableViewCell.swift */; };
 		393155A91D50128F0010A01E /* SemesterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 393155A71D50128F0010A01E /* SemesterTableViewCell.xib */; };
+		3938807B1D54C8A900759435 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3938807A1D54C8A900759435 /* ProfileViewController.swift */; };
+		3938807D1D54C8C700759435 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3938807C1D54C8C700759435 /* User.swift */; };
+		3938807F1D54C96100759435 /* UserDefaultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3938807E1D54C96100759435 /* UserDefaultsController.swift */; };
+		393880851D54CCEB00759435 /* ProfileHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393880831D54CCEB00759435 /* ProfileHeaderTableViewCell.swift */; };
+		393880861D54CCEB00759435 /* ProfileHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 393880841D54CCEB00759435 /* ProfileHeaderTableViewCell.xib */; };
 		3949C1C31D4C023600ECA06E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3949C1C21D4C023600ECA06E /* AppDelegate.swift */; };
 		3949C1C51D4C023600ECA06E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3949C1C41D4C023600ECA06E /* FirstViewController.swift */; };
 		3949C1C71D4C023600ECA06E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3949C1C61D4C023600ECA06E /* SecondViewController.swift */; };
@@ -21,7 +26,7 @@
 		3949C1CF1D4C023600ECA06E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3949C1CD1D4C023600ECA06E /* LaunchScreen.storyboard */; };
 		6F3DDBC5F559E07668FE8AAA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7EF0CF04E05F748B7B6429 /* Pods.framework */; };
 		7F1BC48F1D5234C100DD9DD9 /* NavigationTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC48E1D5234C100DD9DD9 /* NavigationTabViewController.swift */; };
-		7F1BC4961D5245DD00DD9DD9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC4951D5245DD00DD9DD9 /* ProfileViewController.swift */; };
+		7F1BC4961D5245DD00DD9DD9 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC4951D5245DD00DD9DD9 /* ColorViewController.swift */; };
 		7F1BC49D1D52465800DD9DD9 /* QuickPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC49C1D52465800DD9DD9 /* QuickPickerViewController.swift */; };
 		7F1BC4A01D524FE600DD9DD9 /* TintedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC49F1D524FE600DD9DD9 /* TintedImage.swift */; };
 		7F1BC4A31D52520600DD9DD9 /* ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC4A21D52520600DD9DD9 /* ThemeColors.swift */; };
@@ -36,8 +41,8 @@
 		7F33B9C61D50FD47009B60FA /* ViewFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33B9C51D50FD47009B60FA /* ViewFontExtensions.swift */; };
 		7F33B9C91D51073B009B60FA /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33B9C81D51073B009B60FA /* RootTabBarController.swift */; };
 		7FB451031D53A01400567BC6 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB451021D53A01400567BC6 /* RoundedButton.swift */; };
-		7FCE923C1D5345AE00287E44 /* AddSemesterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCE923B1D5345AE00287E44 /* AddSemesterView.swift */; };
-		7FCE923E1D5345BC00287E44 /* AddSemesterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FCE923D1D5345BC00287E44 /* AddSemesterView.xib */; };
+		7FCE923C1D5345AE00287E44 /* SemesterDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCE923B1D5345AE00287E44 /* SemesterDialogView.swift */; };
+		7FCE923E1D5345BC00287E44 /* SemesterDialogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FCE923D1D5345BC00287E44 /* SemesterDialogView.xib */; };
 		7FCE92421D5346A800287E44 /* BlurredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCE92411D5346A800287E44 /* BlurredView.swift */; };
 		7FCE92441D5359E700287E44 /* UiUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCE92431D5359E700287E44 /* UiUtils.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +55,11 @@
 		393155A31D5010630010A01E /* SemestersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemestersViewController.swift; path = Semester/ViewController/SemestersViewController.swift; sourceTree = "<group>"; };
 		393155A61D50128F0010A01E /* SemesterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemesterTableViewCell.swift; path = Semester/View/Cell/SemesterTableViewCell.swift; sourceTree = "<group>"; };
 		393155A71D50128F0010A01E /* SemesterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SemesterTableViewCell.xib; path = Semester/View/Cell/SemesterTableViewCell.xib; sourceTree = "<group>"; };
+		3938807A1D54C8A900759435 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Profile/ViewController/ProfileViewController.swift; sourceTree = "<group>"; };
+		3938807C1D54C8C700759435 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Profile/Model/User.swift; sourceTree = "<group>"; };
+		3938807E1D54C96100759435 /* UserDefaultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaultsController.swift; path = Profile/Controller/UserDefaultsController.swift; sourceTree = "<group>"; };
+		393880831D54CCEB00759435 /* ProfileHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileHeaderTableViewCell.swift; path = Profile/View/Cell/ProfileHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		393880841D54CCEB00759435 /* ProfileHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileHeaderTableViewCell.xib; path = Profile/View/Cell/ProfileHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		3949C1BF1D4C023600ECA06E /* uCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3949C1C21D4C023600ECA06E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3949C1C41D4C023600ECA06E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +69,7 @@
 		3949C1CE1D4C023600ECA06E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3949C1D01D4C023600ECA06E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F1BC48E1D5234C100DD9DD9 /* NavigationTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationTabViewController.swift; path = Root/NavigationTabViewController.swift; sourceTree = "<group>"; };
-		7F1BC4951D5245DD00DD9DD9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Profile/ViewController/ProfileViewController.swift; sourceTree = "<group>"; };
+		7F1BC4951D5245DD00DD9DD9 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorViewController.swift; path = Profile/ViewController/ColorViewController.swift; sourceTree = "<group>"; };
 		7F1BC49C1D52465800DD9DD9 /* QuickPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuickPickerViewController.swift; path = "Quick calculus/ViewController/QuickPickerViewController.swift"; sourceTree = "<group>"; };
 		7F1BC49F1D524FE600DD9DD9 /* TintedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TintedImage.swift; path = Configuration/Utils/TintedImage.swift; sourceTree = "<group>"; };
 		7F1BC4A21D52520600DD9DD9 /* ThemeColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThemeColors.swift; path = Configuration/Themes/ThemeColors.swift; sourceTree = "<group>"; };
@@ -74,8 +84,8 @@
 		7F33B9C51D50FD47009B60FA /* ViewFontExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFontExtensions.swift; sourceTree = "<group>"; };
 		7F33B9C81D51073B009B60FA /* RootTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootTabBarController.swift; path = Root/RootTabBarController.swift; sourceTree = "<group>"; };
 		7FB451021D53A01400567BC6 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedButton.swift; path = Configuration/Categories/RoundedButton.swift; sourceTree = "<group>"; };
-		7FCE923B1D5345AE00287E44 /* AddSemesterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddSemesterView.swift; path = Semester/View/AddSemesterView.swift; sourceTree = "<group>"; };
-		7FCE923D1D5345BC00287E44 /* AddSemesterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddSemesterView.xib; path = Semester/View/AddSemesterView.xib; sourceTree = "<group>"; };
+		7FCE923B1D5345AE00287E44 /* SemesterDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemesterDialogView.swift; path = Semester/View/SemesterDialogView.swift; sourceTree = "<group>"; };
+		7FCE923D1D5345BC00287E44 /* SemesterDialogView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SemesterDialogView.xib; path = Semester/View/SemesterDialogView.xib; sourceTree = "<group>"; };
 		7FCE92411D5346A800287E44 /* BlurredView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlurredView.swift; path = Common/View/BlurredView.swift; sourceTree = "<group>"; };
 		7FCE92431D5359E700287E44 /* UiUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UiUtils.swift; path = Configuration/Utils/UiUtils.swift; sourceTree = "<group>"; };
 		8A7EF0CF04E05F748B7B6429 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +151,15 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		393880801D54CCA800759435 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				393880831D54CCEB00759435 /* ProfileHeaderTableViewCell.swift */,
+				393880841D54CCEB00759435 /* ProfileHeaderTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		3949C1B61D4C023600ECA06E = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +203,7 @@
 		7F1BC4901D52455700DD9DD9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3938807E1D54C96100759435 /* UserDefaultsController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -191,6 +211,7 @@
 		7F1BC4921D52456B00DD9DD9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3938807C1D54C8C700759435 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -198,7 +219,8 @@
 		7F1BC4931D52457600DD9DD9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				7F1BC4951D5245DD00DD9DD9 /* ProfileViewController.swift */,
+				7F1BC4951D5245DD00DD9DD9 /* ColorViewController.swift */,
+				3938807A1D54C8A900759435 /* ProfileViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -206,6 +228,7 @@
 		7F1BC4941D5245A200DD9DD9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				393880801D54CCA800759435 /* Cell */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -364,8 +387,8 @@
 			isa = PBXGroup;
 			children = (
 				393155A51D5012690010A01E /* Cell */,
-				7FCE923B1D5345AE00287E44 /* AddSemesterView.swift */,
-				7FCE923D1D5345BC00287E44 /* AddSemesterView.xib */,
+				7FCE923B1D5345AE00287E44 /* SemesterDialogView.swift */,
+				7FCE923D1D5345BC00287E44 /* SemesterDialogView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -490,7 +513,8 @@
 				7F33B9C01D50F87B009B60FA /* circular_bold.otf in Resources */,
 				393155A91D50128F0010A01E /* SemesterTableViewCell.xib in Resources */,
 				7F33B9C11D50F87B009B60FA /* circular_book.otf in Resources */,
-				7FCE923E1D5345BC00287E44 /* AddSemesterView.xib in Resources */,
+				393880861D54CCEB00759435 /* ProfileHeaderTableViewCell.xib in Resources */,
+				7FCE923E1D5345BC00287E44 /* SemesterDialogView.xib in Resources */,
 				3949C1CC1D4C023600ECA06E /* Assets.xcassets in Resources */,
 				7F33B9C21D50F87B009B60FA /* circular_light.otf in Resources */,
 				3949C1CA1D4C023600ECA06E /* Main.storyboard in Resources */,
@@ -553,23 +577,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FCE923C1D5345AE00287E44 /* AddSemesterView.swift in Sources */,
+				7FCE923C1D5345AE00287E44 /* SemesterDialogView.swift in Sources */,
 				7F1BC4AC1D528BCA00DD9DD9 /* UcalcViewController.swift in Sources */,
 				3949C1C71D4C023600ECA06E /* SecondViewController.swift in Sources */,
+				3938807D1D54C8C700759435 /* User.swift in Sources */,
 				7F1BC4A31D52520600DD9DD9 /* ThemeColors.swift in Sources */,
 				393155A81D50128F0010A01E /* SemesterTableViewCell.swift in Sources */,
+				3938807F1D54C96100759435 /* UserDefaultsController.swift in Sources */,
 				7FB451031D53A01400567BC6 /* RoundedButton.swift in Sources */,
+				3938807B1D54C8A900759435 /* ProfileViewController.swift in Sources */,
 				7F1BC48F1D5234C100DD9DD9 /* NavigationTabViewController.swift in Sources */,
 				3949C1C31D4C023600ECA06E /* AppDelegate.swift in Sources */,
 				7F33B9C61D50FD47009B60FA /* ViewFontExtensions.swift in Sources */,
 				7F33B9C41D50F91A009B60FA /* FontHelper.swift in Sources */,
 				392ED1491D4FFDA600E65629 /* Course.swift in Sources */,
+				393880851D54CCEB00759435 /* ProfileHeaderTableViewCell.swift in Sources */,
 				393155A41D5010630010A01E /* SemestersViewController.swift in Sources */,
 				7FCE92441D5359E700287E44 /* UiUtils.swift in Sources */,
 				7F1BC4A81D52598400DD9DD9 /* ThemeHelper.swift in Sources */,
 				392ED14B1D50008400E65629 /* Evaluation.swift in Sources */,
 				3949C1C51D4C023600ECA06E /* FirstViewController.swift in Sources */,
-				7F1BC4961D5245DD00DD9DD9 /* ProfileViewController.swift in Sources */,
+				7F1BC4961D5245DD00DD9DD9 /* ColorViewController.swift in Sources */,
 				392AF9221D4FEED300A91F92 /* Semester.swift in Sources */,
 				7F1BC4A61D52574A00DD9DD9 /* HexaColorExtension.swift in Sources */,
 				7F1BC49D1D52465800DD9DD9 /* QuickPickerViewController.swift in Sources */,
