@@ -8,11 +8,13 @@
 
 import UIKit
 import CoreGraphics
+import RealmSwift
 
-class SemestersViewController: UcalcViewController,UITableViewDelegate,UITableViewDataSource {
+class SemestersViewController: UcalcViewController,UITableViewDelegate,UITableViewDataSource,SemesterDialogDelegate,SemesterTableViewCellCallback {
     
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var noSemestersView: UIView!
     
     
     var semesters = [Semester]()
@@ -23,19 +25,8 @@ class SemestersViewController: UcalcViewController,UITableViewDelegate,UITableVi
         tableView.registerNib(UINib(nibName: SemesterTableViewCell.identifier(),bundle: nil),
                               forCellReuseIdentifier: SemesterTableViewCell.identifier())
         
-        for i in 0...10{
-            let semester = Semester()
-            semester.name = "Semester \(i)"
-            
-            //semesters.append(semester)
-        }
-        
-        
-        tableView.reloadData()
-        
         setupBarItems()
-        
-        
+        showSemesters()
     }
     
     private func setupBarItems() {
@@ -43,12 +34,28 @@ class SemestersViewController: UcalcViewController,UITableViewDelegate,UITableVi
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_add_white"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(showAddDialog))
     }
     
+    private func showSemesters() {
+        let realm = try! Realm()
+        let tempSemesters = realm.objects(Semester.self)
+        semesters.removeAll()
+        for semester in tempSemesters {
+            semesters.append(semester)
+        }
+        
+        noSemestersView.hidden = semesters.count > 0
+        tableView.reloadData()
+    }
+    
     @IBAction func addSemesterTouchUp(sender: AnyObject) {
         showAddDialog()
     }
     
     func showAddDialog(){
-        SemesterDialogView.present(self)
+        SemesterDialogView.present(self,delegate: self)
+    }
+    
+    func didSaveSemester() {
+        showSemesters()
     }
     
     
@@ -68,7 +75,7 @@ class SemestersViewController: UcalcViewController,UITableViewDelegate,UITableVi
         
         let semester = semesters[indexPath.row]
         cell.setData(semester)
-        
+        cell.delegate = self;
         
         return cell
     }
@@ -82,7 +89,23 @@ class SemestersViewController: UcalcViewController,UITableViewDelegate,UITableVi
         return UITableViewAutomaticDimension
     }
     
+    // MARK: Interaction with cell
     
+    
+    func requestedDelete(semester: Semester) {
+        let alert = UIAlertController(title: NSLocalizedString("Remove semester", comment: ""), message: NSLocalizedString("Do you wish to remove this semester?", comment: ""), preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: ""), style: UIAlertActionStyle.Default, handler: { (UIAlertAction) in
+            let realm = try! Realm()
+            try! realm.write {
+                realm.delete(semester)
+            }
+            self.showSemesters()
+        }))
+        
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: UIAlertActionStyle.Cancel, handler: nil))
+        
+        presentViewController(alert, animated: true, completion: nil)
+    }
     
     
 }

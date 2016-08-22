@@ -91,6 +91,7 @@
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="noSemestersView" destination="94f-8U-hb4" id="1dp-4x-yNX"/>
                         <outlet property="tableView" destination="ITH-8b-GCQ" id="tBh-Qh-kfd"/>
                     </connections>
                 </viewController>
@@ -137,17 +138,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ehb-NE-9NE">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                                 <connections>
                                     <outlet property="dataSource" destination="v4P-eh-gga" id="0nG-qG-tVv"/>
                                     <outlet property="delegate" destination="v4P-eh-gga" id="EuL-xC-LFH"/>
@@ -163,7 +154,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Pick a color" id="03o-1B-nlX">
-                                        <barButtonItem key="leftBarButtonItem" title="Close" style="plain" id="WX6-lY-U9s">
+                                        <barButtonItem key="leftBarButtonItem" title="Close" id="WX6-lY-U9s">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="closeClicked:" destination="v4P-eh-gga" id="EgW-wQ-FTw"/>
@@ -198,6 +189,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFo-2W-03a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1539" y="1686"/>
+        </scene>
+        <!--Licenses View Controller-->
+        <scene sceneID="dNy-jo-9SP">
+            <objects>
+                <viewController id="08j-U0-YGN" customClass="LicensesViewController" customModule="uCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rzl-Yv-tuG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pic-mX-bEl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xZr-35-ZXa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="135" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wNu-om-vJc">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LicensesTableViewCell" editingAccessoryType="disclosureIndicator" rowHeight="135" id="CAg-mC-IhR" customClass="LicensesTableViewCell" customModule="uCalc" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="135"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CAg-mC-IhR" id="6jK-vS-7B7">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="134.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Library name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irq-LS-dJQ">
+                                                    <rect key="frame" x="8" y="8" width="574" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="regular"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4W8-6j-eLE">
+                                                    <rect key="frame" x="8" y="40" width="574" height="76.5"/>
+                                                    <string key="text">Library description Library description Library description Library description Library description Library description Library description Library description Library description Library description Library description Library description Library description Library description Library description </string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <string key="userLabel">Library description Library description Library description Library description Library description Library description Library description Library description Library description Library description Library description Library description Library description Library description Library description</string>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="light"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4W8-6j-eLE" firstAttribute="leading" secondItem="irq-LS-dJQ" secondAttribute="leading" id="Lpg-Cl-UeQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="4W8-6j-eLE" secondAttribute="trailing" constant="10" id="b2x-eA-lrK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="irq-LS-dJQ" secondAttribute="trailing" constant="10" id="dwM-g0-iYC"/>
+                                                <constraint firstItem="irq-LS-dJQ" firstAttribute="leading" secondItem="6jK-vS-7B7" secondAttribute="leadingMargin" id="gGb-D5-V26"/>
+                                                <constraint firstItem="irq-LS-dJQ" firstAttribute="top" secondItem="6jK-vS-7B7" secondAttribute="topMargin" id="gHy-ra-lJn"/>
+                                                <constraint firstItem="4W8-6j-eLE" firstAttribute="top" secondItem="irq-LS-dJQ" secondAttribute="bottom" constant="8" id="nkm-4X-j7H"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="4W8-6j-eLE" secondAttribute="bottom" constant="10" id="sAz-XU-6kA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="4W8-6j-eLE" id="VHx-8g-mQh"/>
+                                            <outlet property="nameLabel" destination="irq-LS-dJQ" id="zRv-5Y-F7d"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="08j-U0-YGN" id="mTv-VJ-zay"/>
+                                    <outlet property="delegate" destination="08j-U0-YGN" id="3kz-TS-NBy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wNu-om-vJc" firstAttribute="top" secondItem="Rzl-Yv-tuG" secondAttribute="bottom" id="AeL-60-jBm"/>
+                            <constraint firstItem="wNu-om-vJc" firstAttribute="leading" secondItem="xZr-35-ZXa" secondAttribute="leading" id="D2N-do-Nqp"/>
+                            <constraint firstItem="Pic-mX-bEl" firstAttribute="top" secondItem="wNu-om-vJc" secondAttribute="bottom" id="OYK-ac-27M"/>
+                            <constraint firstItem="wNu-om-vJc" firstAttribute="top" secondItem="Rzl-Yv-tuG" secondAttribute="bottom" constant="-44" id="Ynw-ch-5TB"/>
+                            <constraint firstAttribute="trailing" secondItem="wNu-om-vJc" secondAttribute="trailing" id="j64-x6-qfC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="AeL-60-jBm"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sJB-8N-Pjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1539" y="2387"/>
         </scene>
         <!--Quick calculus-->
         <scene sceneID="k02-Lz-JVh">
@@ -259,11 +335,12 @@
                         <outlet property="tableView" destination="Gyh-g3-Hmc" id="oLW-r2-wNk"/>
                         <segue destination="Afz-or-U8U" kind="show" identifier="EditProfileSegue" id="HGy-rR-UC2"/>
                         <segue destination="v4P-eh-gga" kind="presentation" identifier="PickColorSegue" id="LD2-tV-H5O"/>
+                        <segue destination="08j-U0-YGN" kind="show" identifier="LicenseSegue" id="teW-IE-NAH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eka-li-o9s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="728" y="900"/>
+            <point key="canvasLocation" x="728" y="892"/>
         </scene>
         <!--Root Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

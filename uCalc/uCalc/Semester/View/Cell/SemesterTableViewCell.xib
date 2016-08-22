@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="269"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="268"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="268.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75d-by-LFb">
@@ -23,6 +23,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="style" value="light"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="So8-Pd-uq6">
                                 <rect key="frame" x="18" y="66" width="84" height="53"/>
@@ -143,7 +146,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="style" value="light"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObK-Kb-9bN">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObK-Kb-9bN">
                                 <rect key="frame" x="8" y="201" width="135" height="31"/>
                                 <state key="normal" title="Calcular ponderado"/>
                                 <userDefinedRuntimeAttributes>
@@ -167,6 +170,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="style" value="regular"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -180,6 +186,17 @@
                                     <constraint firstAttribute="bottom" secondItem="noT-Hs-ngz" secondAttribute="bottom" id="rdH-kr-YAc"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sst-fH-a3J">
+                                <rect key="frame" x="256" y="196.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8wI-jr-9kU"/>
+                                    <constraint firstAttribute="width" constant="40" id="KAl-ZL-bxv"/>
+                                </constraints>
+                                <state key="normal" image="ic_delete"/>
+                                <connections>
+                                    <action selector="deleteTouchUp:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="00q-Xg-hZ9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -197,6 +214,7 @@
                             <constraint firstItem="QeI-sG-o9X" firstAttribute="top" secondItem="SI9-bc-NpL" secondAttribute="bottom" constant="20" id="J68-aM-wtP"/>
                             <constraint firstAttribute="trailing" secondItem="ppu-ue-GLK" secondAttribute="trailing" constant="40" id="JG3-l8-GDe"/>
                             <constraint firstAttribute="bottom" secondItem="ObK-Kb-9bN" secondAttribute="bottom" constant="10" id="Nex-3I-9gF"/>
+                            <constraint firstItem="sst-fH-a3J" firstAttribute="centerY" secondItem="ObK-Kb-9bN" secondAttribute="centerY" id="Vo7-Jc-2Ke"/>
                             <constraint firstItem="SI9-bc-NpL" firstAttribute="centerX" secondItem="75d-by-LFb" secondAttribute="centerX" id="XRv-94-ZQl"/>
                             <constraint firstItem="GTb-P6-32V" firstAttribute="top" secondItem="pkJ-P7-Cs8" secondAttribute="top" id="YeY-4t-ir0"/>
                             <constraint firstItem="ObK-Kb-9bN" firstAttribute="leading" secondItem="75d-by-LFb" secondAttribute="leading" constant="8" id="bAx-3j-DlT"/>
@@ -207,6 +225,8 @@
                             <constraint firstItem="ObK-Kb-9bN" firstAttribute="top" secondItem="QeI-sG-o9X" secondAttribute="bottom" constant="10" id="in0-M3-U5z"/>
                             <constraint firstItem="So8-Pd-uq6" firstAttribute="leading" secondItem="75d-by-LFb" secondAttribute="leading" constant="18" id="ite-Fl-AtX"/>
                             <constraint firstItem="GTb-P6-32V" firstAttribute="leading" secondItem="pkJ-P7-Cs8" secondAttribute="trailing" constant="8" id="nWU-hm-Qaf"/>
+                            <constraint firstItem="sst-fH-a3J" firstAttribute="top" secondItem="QeI-sG-o9X" secondAttribute="bottom" constant="4" id="om6-hG-6Eo"/>
+                            <constraint firstAttribute="trailing" secondItem="sst-fH-a3J" secondAttribute="trailing" constant="8" id="p5Y-Se-vQj"/>
                             <constraint firstItem="So8-Pd-uq6" firstAttribute="top" secondItem="pkJ-P7-Cs8" secondAttribute="top" id="rwB-ds-U7w"/>
                             <constraint firstItem="pkJ-P7-Cs8" firstAttribute="top" secondItem="ppu-ue-GLK" secondAttribute="bottom" constant="20" id="sMJ-5f-DLU"/>
                             <constraint firstItem="EZg-cS-JdA" firstAttribute="leading" secondItem="75d-by-LFb" secondAttribute="leading" constant="8" id="tPG-J7-Nn0"/>
@@ -224,6 +244,7 @@
                                 <exclude reference="c6f-pV-jgP"/>
                                 <exclude reference="hj8-Tr-AGq"/>
                                 <exclude reference="5hB-Xs-fF9"/>
+                                <exclude reference="om6-hG-6Eo"/>
                             </mask>
                         </variation>
                     </view>
@@ -273,4 +294,7 @@
             <point key="canvasLocation" x="566" y="668.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ic_delete" width="30" height="30"/>
+    </resources>
 </document>

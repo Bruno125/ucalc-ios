@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import RealmSwift
+
+protocol SemesterDialogDelegate {
+    func didSaveSemester()
+}
 
 class SemesterDialogView: UIView,UITextFieldDelegate {
 
@@ -21,13 +26,15 @@ class SemesterDialogView: UIView,UITextFieldDelegate {
     @IBOutlet weak var semesterCheckButton: UIButton!
     @IBOutlet weak var courseCheckButton: UIButton!
     
-    var parentController : UIViewController?
+    private var parentController : UIViewController?
+    var delegate : SemesterDialogDelegate?
     
-    static func present(controller: UIViewController) -> SemesterDialogView{
+    static func present(controller: UIViewController, delegate : SemesterDialogDelegate) -> SemesterDialogView{
         let arr = NSBundle.mainBundle().loadNibNamed("SemesterDialogView", owner: controller, options: nil)
         let view = arr[0] as! SemesterDialogView
         view.setup()
         view.parentController = controller
+        view.delegate = delegate
         
         UIView.transitionWithView(controller.view, duration: 0.4, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
                 controller.view.addSubview(view)
@@ -36,6 +43,8 @@ class SemesterDialogView: UIView,UITextFieldDelegate {
         
         return view
     }
+    
+    // MARK: - Setup views
     
     private func setup(){
         //Resize view to fill screen
@@ -63,17 +72,12 @@ class SemesterDialogView: UIView,UITextFieldDelegate {
         
     }
     
-    func handleTap(sender: UITapGestureRecognizer? = nil) {
-        // handling code
-        semesterTextField.resignFirstResponder()
-    }
-
     
     private func setupCheckBox( view : UIButton) {
         view.tintColor = ThemeHelper.defaultColor().mainColor
         view.tag = 0
         view.setImage(UIImage.tintedImage("ic_check"), forState: UIControlState.Normal)
-
+        
     }
     
     
@@ -86,36 +90,66 @@ class SemesterDialogView: UIView,UITextFieldDelegate {
         }
     }
     
+    // MARK: - Actions
+    
+    @IBAction func saveTouchUp(sender: AnyObject) {
+        if semesterTextField.text == nil || (semesterTextField.text?.isEmpty)!{
+            return
+        }
+        
+        let realm = try! Realm()
+        let semester = Semester()
+        semester.name = semesterTextField.text!
+        semester.roundSemesterGrade = semesterCheckButton.tag == 1
+        semester.roundCourseGrade = courseCheckButton.tag == 1
+        try! realm.write {
+            realm.add(semester)
+        }
+        
+        close()
+        
+        if delegate != nil {
+            delegate!.didSaveSemester()
+        }
+        
+    }
+    
+    @IBAction func cancelTouchUp(sender: AnyObject) {
+        close()
+    }
+    
+    private func close() {
+        removeFromSuperview()
+        UIView.transitionWithView(parentController!.view, duration: 0.4, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
+            self.displayBars(true)
+            }, completion: nil)
+        
+
+    }
+    
+    // MARK: - Own funcions
+    
+    func handleTap(sender: UITapGestureRecognizer? = nil) {
+        // handling code
+        semesterTextField.resignFirstResponder()
+    }
+    
+    
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        textField.resignFirstResponder()
+        //textField.resignFirstResponder()
         return true
     }
     
     private func displayBars( display : Bool){
-        if let navController = parentController!.navigationController{
+        /*if let navController = parentController!.navigationController{
             // If has navigation bar, hide it
             navController.navigationBar.layer.zPosition = display ? 1 :  -1
             if let tabController = navController.tabBarController {
                 //If has tab bar, hide it
                 tabController.tabBar.layer.zPosition = display ? 1 :  -1
             }
-        }
+        }*/
     }
     
-    
-    
-    @IBAction func saveTouchUp(sender: AnyObject) {
-    }
-    
-    @IBAction func cancelTouchUp(sender: AnyObject) {
-        removeFromSuperview()
-        
-        
-        UIView.transitionWithView(parentController!.view, duration: 0.4, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
-                self.displayBars(true)
-            }, completion: nil)
-        
-        
-    }
     
 }

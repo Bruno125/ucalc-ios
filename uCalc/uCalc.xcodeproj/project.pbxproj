@@ -24,6 +24,8 @@
 		3949C1CA1D4C023600ECA06E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3949C1C81D4C023600ECA06E /* Main.storyboard */; };
 		3949C1CC1D4C023600ECA06E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3949C1CB1D4C023600ECA06E /* Assets.xcassets */; };
 		3949C1CF1D4C023600ECA06E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3949C1CD1D4C023600ECA06E /* LaunchScreen.storyboard */; };
+		39926CB01D6A485400B89ECA /* LicensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39926CAF1D6A485400B89ECA /* LicensesViewController.swift */; };
+		39926CB21D6A49C300B89ECA /* LicensesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39926CB11D6A49C300B89ECA /* LicensesTableViewCell.swift */; };
 		6F3DDBC5F559E07668FE8AAA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7EF0CF04E05F748B7B6429 /* Pods.framework */; };
 		7F1BC48F1D5234C100DD9DD9 /* NavigationTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC48E1D5234C100DD9DD9 /* NavigationTabViewController.swift */; };
 		7F1BC4961D5245DD00DD9DD9 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC4951D5245DD00DD9DD9 /* ColorViewController.swift */; };
@@ -74,6 +76,8 @@
 		3949C1CB1D4C023600ECA06E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3949C1CE1D4C023600ECA06E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3949C1D01D4C023600ECA06E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39926CAF1D6A485400B89ECA /* LicensesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicensesViewController.swift; path = Profile/ViewController/LicensesViewController.swift; sourceTree = "<group>"; };
+		39926CB11D6A49C300B89ECA /* LicensesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicensesTableViewCell.swift; path = Profile/View/Cell/LicensesTableViewCell.swift; sourceTree = "<group>"; };
 		7F1BC48E1D5234C100DD9DD9 /* NavigationTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationTabViewController.swift; path = Root/NavigationTabViewController.swift; sourceTree = "<group>"; };
 		7F1BC4951D5245DD00DD9DD9 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorViewController.swift; path = Profile/ViewController/ColorViewController.swift; sourceTree = "<group>"; };
 		7F1BC49C1D52465800DD9DD9 /* QuickPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuickPickerViewController.swift; path = "Quick calculus/ViewController/QuickPickerViewController.swift"; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 				7F45FCD91D54B9BF00CE3E1D /* OptionTableViewCell.xib */,
 				7F45FCE41D54DB8F00CE3E1D /* ColorCollectionViewCell.swift */,
 				7F45FCE51D54DB8F00CE3E1D /* ColorCollectionViewCell.xib */,
+				39926CB11D6A49C300B89ECA /* LicensesTableViewCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 			children = (
 				7F1BC4951D5245DD00DD9DD9 /* ColorViewController.swift */,
 				3938807A1D54C8A900759435 /* ProfileViewController.swift */,
+				39926CAF1D6A485400B89ECA /* LicensesViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -511,6 +517,7 @@
 				TargetAttributes = {
 					3949C1BE1D4C023600ECA06E = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 69SG68S3P9;
 					};
 				};
 			};
@@ -612,6 +619,7 @@
 				7F45FCE61D54DB8F00CE3E1D /* ColorCollectionViewCell.swift in Sources */,
 				7FCE923C1D5345AE00287E44 /* SemesterDialogView.swift in Sources */,
 				7F1BC4AC1D528BCA00DD9DD9 /* UcalcViewController.swift in Sources */,
+				39926CB01D6A485400B89ECA /* LicensesViewController.swift in Sources */,
 				3949C1C71D4C023600ECA06E /* SecondViewController.swift in Sources */,
 				3938807D1D54C8C700759435 /* User.swift in Sources */,
 				7F1BC4A31D52520600DD9DD9 /* ThemeColors.swift in Sources */,
@@ -639,6 +647,7 @@
 				7F1BC4A01D524FE600DD9DD9 /* TintedImage.swift in Sources */,
 				7F33B9C91D51073B009B60FA /* RootTabBarController.swift in Sources */,
 				7FCE92421D5346A800287E44 /* BlurredView.swift in Sources */,
+				39926CB21D6A49C300B89ECA /* LicensesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,10 +774,14 @@
 			baseConfigurationReference = 94F04060EE000B88DD79499C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = uCalc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.bruno.uCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -778,10 +791,14 @@
 			baseConfigurationReference = 1CBD48F95C85D890F01E3EC0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = uCalc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.bruno.uCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;

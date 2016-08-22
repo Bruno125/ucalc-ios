@@ -23,7 +23,7 @@ class UiUtils: NSObject {
     static func applyBottomBorder( textField: UITextField, borderWidth : CGFloat) {
         
         let border = CALayer()
-        border.borderColor = UIColor.lightGrayColor().CGColor
+        border.borderColor = ThemeHelper.defaultColor().accentColor.CGColor
         border.frame = CGRect(x: 0, y: textField.frame.size.height - borderWidth , width: textField.frame.size.width, height: textField.frame.size.height)
         border.borderWidth = borderWidth
         textField.layer.addSublayer(border)

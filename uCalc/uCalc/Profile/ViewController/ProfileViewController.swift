@@ -119,7 +119,7 @@ class ProfileViewController: UcalcViewController, UITableViewDelegate, UITableVi
         
     }
     func openLicenses(){
-        
+        performSegueWithIdentifier("LicenseSegue", sender: self)
     }
     
     

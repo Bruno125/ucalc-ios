@@ -8,8 +8,14 @@
 
 import UIKit
 
-class SemesterTableViewCell: UITableViewCell {
+@objc protocol SemesterTableViewCellCallback {
+    
+    optional func requestedDelete(semester: Semester)
+    optional func openCalculatation()
+    
+}
 
+class SemesterTableViewCell: UITableViewCell {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -27,6 +33,7 @@ class SemesterTableViewCell: UITableViewCell {
     
     var mSemester : Semester?
     let color = ThemeHelper.defaultColor()
+    var delegate : SemesterTableViewCellCallback?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -64,6 +71,13 @@ class SemesterTableViewCell: UITableViewCell {
         //creditsLabel.text = semester.totalCredits()
         
         
+    }
+    
+    
+    @IBAction func deleteTouchUp(sender: AnyObject) {
+        if delegate != nil {
+            delegate!.requestedDelete!(mSemester!)
+        }
     }
     
     
